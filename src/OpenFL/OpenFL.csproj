@@ -6,6 +6,86 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\kernel\arrange.cl" />
+    <None Remove="resources\kernel\blur.cl" />
+    <None Remove="resources\kernel\circle.cl" />
+    <None Remove="resources\kernel\clip.cl" />
+    <None Remove="resources\kernel\convert\gconvert.cle" />
+    <None Remove="resources\kernel\convert\gconvert_all.cle" />
+    <None Remove="resources\kernel\convert\gconvert_one.cle" />
+    <None Remove="resources\kernel\crop.cl" />
+    <None Remove="resources\kernel\crush.cl" />
+    <None Remove="resources\kernel\cut.cl" />
+    <None Remove="resources\kernel\dynamic\dyn_1_arg.cle" />
+    <None Remove="resources\kernel\dynamic\dyn_1_arg_c.cle" />
+    <None Remove="resources\kernel\dynamic\dyn_2_arg.cle" />
+    <None Remove="resources\kernel\dynamic\dyn_2_arg_c.cle" />
+    <None Remove="resources\kernel\dynamic\dyn_no_arg.cle" />
+    <None Remove="resources\kernel\dynamic\dyn_no_arg_c.cle" />
+    <None Remove="resources\kernel\dynamic\helper.cle" />
+    <None Remove="resources\kernel\flmath\flmath.cle" />
+    <None Remove="resources\kernel\flmath_kernels.cl" />
+    <None Remove="resources\kernel\gradient.cl" />
+    <None Remove="resources\kernel\interpolator\finterpolation.cle" />
+    <None Remove="resources\kernel\interpolator\internal\allginterpolation.cle" />
+    <None Remove="resources\kernel\interpolator\internal\ginterpolation.cle" />
+    <None Remove="resources\kernel\interpolator\interpolation.cl" />
+    <None Remove="resources\kernel\perlin.cl" />
+    <None Remove="resources\kernel\point.cl" />
+    <None Remove="resources\kernel\random\random.cle" />
+    <None Remove="resources\kernel\random\rnd.cl" />
+    <None Remove="resources\kernel\random\urnd.cl" />
+    <None Remove="resources\kernel\rect.cl" />
+    <None Remove="resources\kernel\shapes\shapes.cle" />
+    <None Remove="resources\kernel\shapes\shapes_f.cle" />
+    <None Remove="resources\kernel\shapes\shapes_uv.cle" />
+    <None Remove="resources\kernel\smooth.cl" />
+    <None Remove="resources\kernel\utils\indexconversion.cle" />
+    <None Remove="resources\kernel\utils\sample.cle" />
+    <None Remove="resources\kernel\worley.cl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="resources\kernel\arrange.cl" />
+    <EmbeddedResource Include="resources\kernel\blur.cl" />
+    <EmbeddedResource Include="resources\kernel\circle.cl" />
+    <EmbeddedResource Include="resources\kernel\clip.cl" />
+    <EmbeddedResource Include="resources\kernel\convert\gconvert.cle" />
+    <EmbeddedResource Include="resources\kernel\convert\gconvert_all.cle" />
+    <EmbeddedResource Include="resources\kernel\convert\gconvert_one.cle" />
+    <EmbeddedResource Include="resources\kernel\crop.cl" />
+    <EmbeddedResource Include="resources\kernel\crush.cl" />
+    <EmbeddedResource Include="resources\kernel\cut.cl" />
+    <EmbeddedResource Include="resources\kernel\dynamic\dyn_1_arg.cle" />
+    <EmbeddedResource Include="resources\kernel\dynamic\dyn_1_arg_c.cle" />
+    <EmbeddedResource Include="resources\kernel\dynamic\dyn_2_arg.cle" />
+    <EmbeddedResource Include="resources\kernel\dynamic\dyn_2_arg_c.cle" />
+    <EmbeddedResource Include="resources\kernel\dynamic\dyn_no_arg.cle" />
+    <EmbeddedResource Include="resources\kernel\dynamic\dyn_no_arg_c.cle" />
+    <EmbeddedResource Include="resources\kernel\dynamic\helper.cle" />
+    <EmbeddedResource Include="resources\kernel\flmath\flmath.cle" />
+    <EmbeddedResource Include="resources\kernel\flmath_kernels.cl" />
+    <EmbeddedResource Include="resources\kernel\gradient.cl" />
+    <EmbeddedResource Include="resources\kernel\interpolator\finterpolation.cle" />
+    <EmbeddedResource Include="resources\kernel\interpolator\internal\allginterpolation.cle" />
+    <EmbeddedResource Include="resources\kernel\interpolator\internal\ginterpolation.cle" />
+    <EmbeddedResource Include="resources\kernel\interpolator\interpolation.cl" />
+    <EmbeddedResource Include="resources\kernel\perlin.cl" />
+    <EmbeddedResource Include="resources\kernel\point.cl" />
+    <EmbeddedResource Include="resources\kernel\random\random.cle" />
+    <EmbeddedResource Include="resources\kernel\random\rnd.cl" />
+    <EmbeddedResource Include="resources\kernel\random\urnd.cl" />
+    <EmbeddedResource Include="resources\kernel\rect.cl" />
+    <EmbeddedResource Include="resources\kernel\shapes\shapes.cle" />
+    <EmbeddedResource Include="resources\kernel\shapes\shapes_f.cle" />
+    <EmbeddedResource Include="resources\kernel\shapes\shapes_uv.cle" />
+    <EmbeddedResource Include="resources\kernel\smooth.cl" />
+    <EmbeddedResource Include="resources\kernel\utils\indexconversion.cle" />
+    <EmbeddedResource Include="resources\kernel\utils\sample.cle" />
+    <EmbeddedResource Include="resources\kernel\worley.cl" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
     <PackageReference Include="System.Memory" Version="4.5.4" />
   </ItemGroup>
