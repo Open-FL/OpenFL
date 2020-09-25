@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-using OpenCL.Memory;
+using OpenCL.NET.Memory;
 
 using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.ElementModifiers;

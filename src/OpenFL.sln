@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginSystem", "..\deps\Plu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenCL", "OpenCL", "{7F943BB5-7CDD-4A3C-BBEE-EAD54A6079E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCL", "..\deps\OpenCL.Wrapper\deps\OpenCL\src\OpenCL\OpenCL.csproj", "{BA3DE701-BA3E-4E03-96D1-6250614EC948}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCL.NET", "..\deps\OpenCL.Wrapper\deps\OpenCL\src\OpenCL\OpenCL.NET.csproj", "{BA3DE701-BA3E-4E03-96D1-6250614EC948}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "..\deps\OpenCL.Wrapper\deps\Utility\src\Utility\Utility.csproj", "{356453E3-A6A1-4E99-802E-A82B31B6AECA}"
 EndProject

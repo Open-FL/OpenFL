@@ -2,8 +2,8 @@
 using System.Drawing;
 using System.Linq;
 
-using OpenCL.DataTypes;
-using OpenCL.Memory;
+using OpenCL.NET.DataTypes;
+using OpenCL.NET.Memory;
 using OpenCL.Wrapper;
 
 using OpenFL.Core.Buffers;
