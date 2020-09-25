@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.Memory" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\deps\OpenCL.Wrapper\deps\Utility\src\Utility\Utility.csproj" />
+    <ProjectReference Include="..\..\deps\OpenCL.Wrapper\src\OpenCL.Wrapper\OpenCL.Wrapper.csproj" />
+    <ProjectReference Include="..\..\deps\PluginSystem\src\PluginSystem\PluginSystem.csproj" />
+  </ItemGroup>
+
+</Project>

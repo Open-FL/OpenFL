@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenFL", "OpenFL\OpenFL.csproj", "{401CB0D6-EF5E-41A8-85C5-24527E94777F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCL.Wrapper", "..\deps\OpenCL.Wrapper\src\OpenCL.Wrapper\OpenCL.Wrapper.csproj", "{9DDED0B4-D15B-4DAD-B072-9413C4F3C7FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginSystem", "..\deps\PluginSystem\src\PluginSystem\PluginSystem.csproj", "{6C36FABA-EE0D-468B-97C6-1D3CAC832054}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenCL", "OpenCL", "{7F943BB5-7CDD-4A3C-BBEE-EAD54A6079E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenCL", "..\deps\OpenCL.Wrapper\deps\OpenCL\src\OpenCL\OpenCL.csproj", "{BA3DE701-BA3E-4E03-96D1-6250614EC948}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "..\deps\OpenCL.Wrapper\deps\Utility\src\Utility\Utility.csproj", "{356453E3-A6A1-4E99-802E-A82B31B6AECA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{401CB0D6-EF5E-41A8-85C5-24527E94777F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401CB0D6-EF5E-41A8-85C5-24527E94777F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401CB0D6-EF5E-41A8-85C5-24527E94777F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401CB0D6-EF5E-41A8-85C5-24527E94777F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DDED0B4-D15B-4DAD-B072-9413C4F3C7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DDED0B4-D15B-4DAD-B072-9413C4F3C7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DDED0B4-D15B-4DAD-B072-9413C4F3C7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DDED0B4-D15B-4DAD-B072-9413C4F3C7FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C36FABA-EE0D-468B-97C6-1D3CAC832054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C36FABA-EE0D-468B-97C6-1D3CAC832054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C36FABA-EE0D-468B-97C6-1D3CAC832054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C36FABA-EE0D-468B-97C6-1D3CAC832054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3DE701-BA3E-4E03-96D1-6250614EC948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3DE701-BA3E-4E03-96D1-6250614EC948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3DE701-BA3E-4E03-96D1-6250614EC948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3DE701-BA3E-4E03-96D1-6250614EC948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356453E3-A6A1-4E99-802E-A82B31B6AECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356453E3-A6A1-4E99-802E-A82B31B6AECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356453E3-A6A1-4E99-802E-A82B31B6AECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356453E3-A6A1-4E99-802E-A82B31B6AECA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9DDED0B4-D15B-4DAD-B072-9413C4F3C7FE} = {7F943BB5-7CDD-4A3C-BBEE-EAD54A6079E2}
+		{BA3DE701-BA3E-4E03-96D1-6250614EC948} = {7F943BB5-7CDD-4A3C-BBEE-EAD54A6079E2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FB192C3-4DAE-410E-8836-649BD8CEA34D}
+	EndGlobalSection
+EndGlobal

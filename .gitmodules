@@ -1,0 +1,8 @@
+[submodule "deps/OpenCL.Wrapper"]
+	path = deps/OpenCL.Wrapper
+	url = https://github.com/Open-FL/OpenCL.Wrapper
+	branch = master
+[submodule "deps/PluginSystem"]
+	path = deps/PluginSystem
+	url = https://github.com/Open-FL/PluginSystem
+	branch = master
