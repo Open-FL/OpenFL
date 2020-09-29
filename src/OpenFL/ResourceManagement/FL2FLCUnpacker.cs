@@ -23,7 +23,9 @@ namespace OpenFL.ResourceManagement
                                                                 container.InstructionSet,
                                                                 container.BufferCreator
                                                                )
-        { }
+        {
+        }
+
         public FL2FLCUnpacker(CLAPI instance, FLInstructionSet iset, BufferCreator bc)
         {
             runner = new FLRunner(

@@ -20,7 +20,7 @@ using Utility.IO.Callbacks;
 namespace OpenFL.Threading
 {
     /// <summary>
-    /// Single Threaded FL Runner Implementation
+    ///     Single Threaded FL Runner Implementation
     /// </summary>
     public class FLScriptRunner : IDisposable
     {

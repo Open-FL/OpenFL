@@ -15,11 +15,12 @@ namespace OpenFL.Serialization.Serializers.Internal.FileFormatSerializer
         private static readonly Dictionary<string, ExtraStage> ExtraSteps = new Dictionary<string, ExtraStage>
                                                                             {
                                                                                 {
-                                                                                    "zip",
-                                                                                    new ExtraStage(
-                                                                                                   new ZipExtraStage(),
-                                                                                                   new UnZipExtraStage()
-                                                                                                  )
+                                                                                    "zip", new ExtraStage(
+                                                                                                          new
+                                                                                                              ZipExtraStage(),
+                                                                                                          new
+                                                                                                              UnZipExtraStage()
+                                                                                                         )
                                                                                 }
                                                                             };
 

@@ -5,13 +5,13 @@ using Utility.Exceptions;
 namespace OpenFL.Core.Exceptions
 {
     /// <summary>
-    /// This exception gets thrown when a FL instruction or kernel was used incorrectly in the program script.
+    ///     This exception gets thrown when a FL instruction or kernel was used incorrectly in the program script.
     /// </summary>
     public class FLInvalidFunctionUseException : Byt3Exception
     {
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="function">Function that was used wrongly</param>
         /// <param name="errorMessage">The Error message that explains what went wrong</param>
@@ -27,7 +27,7 @@ namespace OpenFL.Core.Exceptions
         }
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="function">Function that was used wrongly</param>
         /// <param name="errorMessage">The Error message that explains what went wrong</param>

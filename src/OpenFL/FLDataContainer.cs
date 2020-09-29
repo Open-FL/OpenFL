@@ -17,17 +17,16 @@ namespace OpenFL
     {
 
         public readonly BufferCreator BufferCreator;
-        public FLProgramCheckBuilder CheckBuilder { get; private set; }
+
+
+        private readonly FL2FLCUnpacker fl2flc;
+        private readonly FLRESUnpacker fl2res;
+        private readonly FL2TexUnpacker fl2tex;
+        private readonly FLC2TexUnpacker flc2tex;
         public readonly CLAPI Instance;
         public readonly FLInstructionSet InstructionSet;
         public readonly FLParser Parser;
         public SerializableFLProgram SerializedProgram;
-
-
-        private readonly FL2FLCUnpacker fl2flc;
-        private readonly FL2TexUnpacker fl2tex;
-        private readonly FLC2TexUnpacker flc2tex;
-        private readonly FLRESUnpacker fl2res;
 
         public FLDataContainer()
         {
@@ -35,18 +34,25 @@ namespace OpenFL
             InstructionSet = FLInstructionSet.CreateWithBuiltInTypes(Instance, "assets/kernel");
             BufferCreator = BufferCreator.CreateWithBuiltInTypes();
             Parser = new FLParser(InstructionSet, BufferCreator, WorkItemRunnerSettings.Default);
-
-            
         }
 
         public FLDataContainer(
             CLAPI instance, FLInstructionSet iset, BufferCreator creator, FLParser parser)
         {
             Instance = instance;
+
             //KernelDB = db;
             InstructionSet = iset;
             BufferCreator = creator;
             Parser = parser;
+        }
+
+        public FLProgramCheckBuilder CheckBuilder { get; private set; }
+
+        public void Dispose()
+        {
+            InstructionSet.Dispose();
+            Instance.Dispose();
         }
 
         public void SetCheckBuilder(FLProgramCheckBuilder builder)
@@ -56,16 +62,7 @@ namespace OpenFL
 
         public FLBuffer CreateBuffer(int width, int height, int depth, string name)
         {
-
             return new FLBuffer(Instance, width, height, depth, name);
-
-
-        }
-
-        public void Dispose()
-        {
-            InstructionSet.Dispose();
-            Instance.Dispose();
         }
 
     }

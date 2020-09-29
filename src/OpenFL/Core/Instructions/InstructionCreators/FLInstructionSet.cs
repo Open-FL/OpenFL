@@ -18,12 +18,13 @@ namespace OpenFL.Core.Instructions.InstructionCreators
     public class FLInstructionSet : IDisposable, IPluginHost
     {
 
+        private readonly List<FLInstructionCreator> creators = new List<FLInstructionCreator>();
+        public readonly KernelDatabase Database;
+
         private FLInstructionSet(KernelDatabase db)
         {
             Database = db;
         }
-        private readonly List<FLInstructionCreator> creators = new List<FLInstructionCreator>();
-        public readonly KernelDatabase Database;
 
         public int CreatorCount => creators.Count;
 
@@ -35,6 +36,19 @@ namespace OpenFL.Core.Instructions.InstructionCreators
             }
 
             creators.Clear();
+        }
+
+        public bool IsAllowedPlugin(IPlugin plugin)
+        {
+            return true;
+        }
+
+        public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
+        {
+        }
+
+        public void OnPluginUnload(IPlugin plugin)
+        {
         }
 
         public static FLInstructionSet CreateWithBuiltInTypes(KernelDatabase db)
@@ -114,7 +128,7 @@ namespace OpenFL.Core.Instructions.InstructionCreators
             }
 
             throw new FLInstructionCreatorNotFoundException(
-                                                           $"Could not find an Instruction called '{instruction.InstructionKey}'"
+                                                            $"Could not find an Instruction called '{instruction.InstructionKey}'"
                                                            );
         }
 
@@ -136,19 +150,6 @@ namespace OpenFL.Core.Instructions.InstructionCreators
                     AddInstruction(creator);
                 }
             }
-        }
-
-        public bool IsAllowedPlugin(IPlugin plugin)
-        {
-            return true;
-        }
-
-        public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
-        {
-        }
-
-        public void OnPluginUnload(IPlugin plugin)
-        {
         }
 
     }

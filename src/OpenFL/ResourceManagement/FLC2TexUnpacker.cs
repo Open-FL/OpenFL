@@ -18,12 +18,15 @@ namespace OpenFL.ResourceManagement
     {
 
         private readonly FLRunner runner;
+
         public FLC2TexUnpacker(FLDataContainer container) : this(
-                                                                container.Instance,
-                                                                container.InstructionSet,
-                                                                container.BufferCreator
-                                                               )
-        { }
+                                                                 container.Instance,
+                                                                 container.InstructionSet,
+                                                                 container.BufferCreator
+                                                                )
+        {
+        }
+
         public FLC2TexUnpacker(CLAPI instance, FLInstructionSet iset, BufferCreator bc)
         {
             runner = new FLRunner(

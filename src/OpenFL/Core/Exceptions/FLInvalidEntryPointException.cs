@@ -5,13 +5,13 @@ using Utility.Exceptions;
 namespace OpenFL.Core.Exceptions
 {
     /// <summary>
-    /// This Exception occurs when the FLInterpreter is not able to find the Main: method
+    ///     This Exception occurs when the FLInterpreter is not able to find the Main: method
     /// </summary>
     public class FLInvalidEntryPointException : Byt3Exception
     {
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="errorMessage">The message why this exception occurred</param>
         /// <param name="inner">Inner exeption</param>
@@ -20,7 +20,7 @@ namespace OpenFL.Core.Exceptions
         }
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="errorMessage">The message why this exception occurred</param>
         public FLInvalidEntryPointException(string errorMessage) : base(errorMessage)

@@ -5,13 +5,13 @@ using Utility.Exceptions;
 namespace OpenFL.Core.Exceptions
 {
     /// <summary>
-    /// This Exception occurs when the FLInterpreter is not able to find the argument type through deduction
+    ///     This Exception occurs when the FLInterpreter is not able to find the argument type through deduction
     /// </summary>
     public class FLInvalidArgumentType : Byt3Exception
     {
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="varname">Variable name that is affected</param>
         /// <param name="expected">The expected value for the variable</param>
@@ -24,7 +24,7 @@ namespace OpenFL.Core.Exceptions
         }
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="varname">Variable name that is affected</param>
         /// <param name="expected">The expected value for the variable</param>

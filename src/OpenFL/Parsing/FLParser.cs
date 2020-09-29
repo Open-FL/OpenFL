@@ -48,7 +48,10 @@ namespace OpenFL.Parsing
             Verify();
         }
 
-        public FLParser(KernelDatabase db) : this(FLInstructionSet.CreateWithBuiltInTypes(db), BufferCreator.CreateWithBuiltInTypes())
+        public FLParser(KernelDatabase db) : this(
+                                                  FLInstructionSet.CreateWithBuiltInTypes(db),
+                                                  BufferCreator.CreateWithBuiltInTypes()
+                                                 )
         {
         }
 

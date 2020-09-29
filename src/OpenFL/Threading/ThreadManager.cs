@@ -8,19 +8,19 @@ namespace OpenFL.Threading
     {
 
         /// <summary>
-        /// A List of all Running Tasks
+        ///     A List of all Running Tasks
         /// </summary>
         public List<TaskReference<T>> RunningTasks = new List<TaskReference<T>>();
 
         /// <summary>
-        /// The Type of the TheadManager
-        /// to comply with the IThreadManager Interface
+        ///     The Type of the TheadManager
+        ///     to comply with the IThreadManager Interface
         /// </summary>
         public Type Type => typeof(T);
 
 
         /// <summary>
-        /// Checks the States of the currently running tasks
+        ///     Checks the States of the currently running tasks
         /// </summary>
         /// <returns>True if all tasks finished</returns>
         public bool CheckStates()
@@ -37,7 +37,7 @@ namespace OpenFL.Threading
         }
 
         /// <summary>
-        /// Enqueues the Task and runs it
+        ///     Enqueues the Task and runs it
         /// </summary>
         /// <param name="task"></param>
         public void RunTask(TaskReference<T> task)
@@ -49,7 +49,7 @@ namespace OpenFL.Threading
     }
 
     /// <summary>
-    /// Static Implementation of the Thread Manager
+    ///     Static Implementation of the Thread Manager
     /// </summary>
     public static class ThreadManager
     {
@@ -57,7 +57,7 @@ namespace OpenFL.Threading
         private static readonly List<IThreadManager> Managers = new List<IThreadManager>();
 
         /// <summary>
-        /// Runs a Task on a different thread
+        ///     Runs a Task on a different thread
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="task"></param>
@@ -69,7 +69,7 @@ namespace OpenFL.Threading
         }
 
         /// <summary>
-        /// Runs a Task on a different thread
+        ///     Runs a Task on a different thread
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="task"></param>
@@ -80,7 +80,7 @@ namespace OpenFL.Threading
         }
 
         /// <summary>
-        /// Checks all ThreadManager Completion States and removes them when they have finished
+        ///     Checks all ThreadManager Completion States and removes them when they have finished
         /// </summary>
         internal static void CheckManagerStates()
         {
@@ -94,7 +94,7 @@ namespace OpenFL.Threading
         }
 
         /// <summary>
-        /// Returns a ThreadManager of Type T
+        ///     Returns a ThreadManager of Type T
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
@@ -116,7 +116,7 @@ namespace OpenFL.Threading
         }
 
         /// <summary>
-        /// Removes a manager from the manager list
+        ///     Removes a manager from the manager list
         /// </summary>
         /// <param name="manager"></param>
         internal static void RemoveManager(IThreadManager manager)
@@ -125,7 +125,7 @@ namespace OpenFL.Threading
         }
 
         /// <summary>
-        /// Creates a Task of a specific type
+        ///     Creates a Task of a specific type
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="task"></param>

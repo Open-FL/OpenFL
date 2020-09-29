@@ -75,7 +75,7 @@ namespace OpenFL.Serialization
                     { typeof(SerializableExternalFLFunction), exfunc },
                     { typeof(SerializableFLFunction), efunc },
                     { typeof(SerializableEmptyFLBuffer), ebuf },
-                    { typeof(SerializableFromFileFLBuffer), fibuf },
+                    { typeof(SerializableFromFileFLBuffer), fibuf }
                 };
 
             SerializableFLProgramSerializer prog = new SerializableFLProgramSerializer(bufferParser, iset);

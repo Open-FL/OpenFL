@@ -9,7 +9,7 @@ using OpenFL.Core.DataObjects.ExecutableDataObjects;
 namespace OpenFL.Core.Buffers
 {
     /// <summary>
-    /// Wrapper for the Memory Buffer holding some useful additional data
+    ///     Wrapper for the Memory Buffer holding some useful additional data
     /// </summary>
     public class FLBuffer : FLParsedObject, IDisposable
     {
@@ -58,7 +58,7 @@ namespace OpenFL.Core.Buffers
         }
 
         /// <summary>
-        /// The Internal Constructor
+        ///     The Internal Constructor
         /// </summary>
         /// <param name="buffer">The inner buffer</param>
         public FLBuffer(MemoryBuffer buffer, int width, int height, int depth)
@@ -71,7 +71,7 @@ namespace OpenFL.Core.Buffers
         }
 
         /// <summary>
-        /// The buffer
+        ///     The buffer
         /// </summary>
         public virtual MemoryBuffer Buffer { get; protected set; }
 
@@ -84,12 +84,13 @@ namespace OpenFL.Core.Buffers
         public long Size => Buffer.Size;
 
         /// <summary>
-        /// Flag that is used to keep track of memory buffers that stayed inside the engine code and can not possibly be changed or used by the user.
+        ///     Flag that is used to keep track of memory buffers that stayed inside the engine code and can not possibly be
+        ///     changed or used by the user.
         /// </summary>
         public bool IsInternal { get; private set; }
 
         /// <summary>
-        /// The Buffer name
+        ///     The Buffer name
         /// </summary>
         public string DefinedBufferName { get; private set; }
 
@@ -100,7 +101,7 @@ namespace OpenFL.Core.Buffers
         }
 
         /// <summary>
-        /// Sets the IsInernal Flag to the specified state
+        ///     Sets the IsInernal Flag to the specified state
         /// </summary>
         /// <param name="internalState">The state</param>
         internal void SetInternalState(bool internalState)
@@ -109,7 +110,7 @@ namespace OpenFL.Core.Buffers
         }
 
         /// <summary>
-        /// Sets the buffer name
+        ///     Sets the buffer name
         /// </summary>
         /// <param name="key">The Name of the buffer</param>
         public void SetKey(string key)
@@ -118,7 +119,7 @@ namespace OpenFL.Core.Buffers
         }
 
         /// <summary>
-        /// To string override
+        ///     To string override
         /// </summary>
         /// <returns>Console friendly string</returns>
         public override string ToString()

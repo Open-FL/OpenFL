@@ -15,32 +15,32 @@ namespace OpenFL.Core.DataObjects.SerializableDataObjects
         BufferArray = 32,
 
         /// <summary>
-        /// Buffer | BufferArray
+        ///     Buffer | BufferArray
         /// </summary>
         AnyBuffer = Buffer | BufferArray,
 
         /// <summary>
-        /// Function | Script | AnyBuffer
+        ///     Function | Script | AnyBuffer
         /// </summary>
         DefinedElement = Function | Script | AnyBuffer,
 
         /// <summary>
-        /// Function | Script
+        ///     Function | Script
         /// </summary>
         DefinedFunction = Function | Script,
 
         /// <summary>
-        /// Function | AnyBuffer
+        ///     Function | AnyBuffer
         /// </summary>
         InternalDefinedElement = Function | AnyBuffer,
 
         /// <summary>
-        /// Value | Name
+        ///     Value | Name
         /// </summary>
         NumberResolvable = Value | Name,
 
         /// <summary>
-        /// All Elements.
+        ///     All Elements.
         /// </summary>
         AllElements = -1
 

@@ -12,10 +12,27 @@ using PluginSystem.Core.Pointer;
 
 namespace OpenFL.Core.Buffers.BufferCreators
 {
-    public class BufferCreator:IPluginHost
+    public class BufferCreator : IPluginHost
     {
-        private BufferCreator() { }
+
         private readonly List<ASerializableBufferCreator> bufferCreators = new List<ASerializableBufferCreator>();
+
+        private BufferCreator()
+        {
+        }
+
+        public bool IsAllowedPlugin(IPlugin plugin)
+        {
+            return true;
+        }
+
+        public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
+        {
+        }
+
+        public void OnPluginUnload(IPlugin plugin)
+        {
+        }
 
 
         public static BufferCreator CreateWithBuiltInTypes()
@@ -60,21 +77,6 @@ namespace OpenFL.Core.Buffers.BufferCreators
             }
 
             throw new FLBufferCreatorNotFoundException($"'{key}' is not a valid Buffer Creator Name");
-        }
-
-        public bool IsAllowedPlugin(IPlugin plugin)
-        {
-            return true;
-        }
-
-        public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
-        {
-
-        }
-
-        public void OnPluginUnload(IPlugin plugin)
-        {
-
         }
 
     }

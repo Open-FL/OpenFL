@@ -9,7 +9,7 @@ using OpenFL.Core.DataObjects.ExecutableDataObjects;
 namespace OpenFL.Threading
 {
     /// <summary>
-    /// Contains the Context in which the FL Runner is executing the enqueued items
+    ///     Contains the Context in which the FL Runner is executing the enqueued items
     /// </summary>
     public struct FlScriptExecutionContext
     {

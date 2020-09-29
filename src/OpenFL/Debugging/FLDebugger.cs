@@ -131,7 +131,8 @@ namespace OpenFL.Debugging
             program.FreeResources();
         }
 
-        public static void StartContainer(FLDataContainer container, FLProgram program, int width, int height, int depth)
+        public static void StartContainer(
+            FLDataContainer container, FLProgram program, int width, int height, int depth)
         {
             Start(container.Instance, program, width, height, depth);
         }

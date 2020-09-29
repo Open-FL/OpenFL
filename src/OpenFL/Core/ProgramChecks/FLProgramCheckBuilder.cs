@@ -11,9 +11,9 @@ using Utility.ObjectPipeline;
 
 namespace OpenFL.Core.ProgramChecks
 {
-    public class FLProgramCheckBuilder: IPluginHost
+    public class FLProgramCheckBuilder : IPluginHost
     {
-        public FLProgramCheckType StartProfile { get; }
+
         public FLProgramCheckBuilder(FLInstructionSet iset, BufferCreator bc)
         {
             ProgramChecks = new List<FLProgramCheck>();
@@ -30,12 +30,14 @@ namespace OpenFL.Core.ProgramChecks
             StartProfile = profile;
             ProgramChecks = new List<FLProgramCheck>();
 
-            
+
             ProgramChecks.Sort((x, y) => y.Priority.CompareTo(x.Priority));
             InstructionSet = iset;
             BufferCreator = bc;
             PluginManager.LoadPlugins(this);
         }
+
+        public FLProgramCheckType StartProfile { get; }
 
         public FLInstructionSet InstructionSet { get; }
 
@@ -46,6 +48,19 @@ namespace OpenFL.Core.ProgramChecks
         public bool IsAttached { get; private set; }
 
         public Pipeline AttachedPipeline { get; private set; }
+
+        public bool IsAllowedPlugin(IPlugin plugin)
+        {
+            return true;
+        }
+
+        public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
+        {
+        }
+
+        public void OnPluginUnload(IPlugin plugin)
+        {
+        }
 
         public static FLProgramCheckBuilder CreateDefaultCheckBuilder(
             FLInstructionSet iset, BufferCreator bc,
@@ -127,19 +142,6 @@ namespace OpenFL.Core.ProgramChecks
             IsAttached = false;
             AttachedPipeline = null;
             return !verify || p.Verify();
-        }
-
-        public bool IsAllowedPlugin(IPlugin plugin)
-        {
-            return true;
-        }
-
-        public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
-        {
-        }
-
-        public void OnPluginUnload(IPlugin plugin)
-        {
         }
 
     }

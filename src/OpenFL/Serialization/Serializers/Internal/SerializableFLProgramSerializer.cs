@@ -32,6 +32,19 @@ namespace OpenFL.Serialization.Serializers.Internal
             }
         }
 
+        public bool IsAllowedPlugin(IPlugin plugin)
+        {
+            return true;
+        }
+
+        public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
+        {
+        }
+
+        public void OnPluginUnload(IPlugin plugin)
+        {
+        }
+
         public override SerializableFLProgram DeserializePacket(PrimitiveValueWrapper s)
         {
             int funcCount = s.ReadInt();
@@ -181,19 +194,6 @@ namespace OpenFL.Serialization.Serializers.Internal
 
                 s.Write(temp.GetBuffer(), (int) temp.Position);
             }
-        }
-
-        public bool IsAllowedPlugin(IPlugin plugin)
-        {
-            return true;
-        }
-
-        public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
-        {
-        }
-
-        public void OnPluginUnload(IPlugin plugin)
-        {
         }
 
     }

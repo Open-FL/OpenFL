@@ -4,14 +4,14 @@ using System.Threading;
 namespace OpenFL.Threading
 {
     /// <summary>
-    /// A reference to a specific task item
+    ///     A reference to a specific task item
     /// </summary>
     /// <typeparam name="T">Type of endresult</typeparam>
     public class TaskReference<T>
     {
 
         /// <summary>
-        /// Delegate used by the TaskReference implementation
+        ///     Delegate used by the TaskReference implementation
         /// </summary>
         /// <returns></returns>
         public delegate T DelTask();
@@ -22,7 +22,7 @@ namespace OpenFL.Threading
         private T ret;
 
         /// <summary>
-        /// Internal Constructor
+        ///     Internal Constructor
         /// </summary>
         /// <param name="task">Task to complete</param>
         /// <param name="onFinish">On Finish Event</param>
@@ -33,13 +33,13 @@ namespace OpenFL.Threading
         }
 
         /// <summary>
-        /// A flag that is true if the task has been finished
+        ///     A flag that is true if the task has been finished
         /// </summary>
         public bool IsDone => !t.IsAlive;
 
 
         /// <summary>
-        /// Internal Starts the Thread for the Task
+        ///     Internal Starts the Thread for the Task
         /// </summary>
         internal void RunTask()
         {

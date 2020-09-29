@@ -251,7 +251,7 @@ namespace OpenFL.ResourceManagement
             }
 
             arch.Dispose();
-            
+
             File.Delete(Path.Combine(folder, "Info.xml"));
         }
 

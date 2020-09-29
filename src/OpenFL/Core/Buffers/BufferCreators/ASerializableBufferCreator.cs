@@ -4,8 +4,8 @@ using OpenFL.Core.ElementModifiers;
 namespace OpenFL.Core.Buffers.BufferCreators
 {
     /// <summary>
-    /// Used when parsing
-    /// Creates a ParsableBuffer object based on the string arguments.
+    ///     Used when parsing
+    ///     Creates a ParsableBuffer object based on the string arguments.
     /// </summary>
     public abstract class ASerializableBufferCreator
     {

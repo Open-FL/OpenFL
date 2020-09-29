@@ -8,7 +8,7 @@ using OpenFL.Core.DataObjects.ExecutableDataObjects;
 namespace OpenFL.Threading
 {
     /// <summary>
-    /// Implementation of the Runner Class that executes FL Scripts on a different thread
+    ///     Implementation of the Runner Class that executes FL Scripts on a different thread
     /// </summary>
     public class FlMultiThreadScriptRunner : FLScriptRunner
     {

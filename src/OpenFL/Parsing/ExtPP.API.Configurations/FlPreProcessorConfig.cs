@@ -10,7 +10,7 @@ using Utility.ExtPP.Plugins;
 namespace OpenFL.Parsing.ExtPP.API.Configurations
 {
     /// <summary>
-    /// The PreProcessor Configuration used for OpenFL files
+    ///     The PreProcessor Configuration used for OpenFL files
     /// </summary>
     public class FLPreProcessorConfig : APreProcessorConfig
     {

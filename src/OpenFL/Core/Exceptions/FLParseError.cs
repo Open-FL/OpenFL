@@ -5,13 +5,13 @@ using Utility.Exceptions;
 namespace OpenFL.Core.Exceptions
 {
     /// <summary>
-    /// This exception gets thrown when a FL instruction or kernel was not found or could not be resolved.
+    ///     This exception gets thrown when a FL instruction or kernel was not found or could not be resolved.
     /// </summary>
     public class FLParseError : Byt3Exception
     {
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="varname">Code that was used wrongly</param>
         /// <param name="inner">Inner exeption</param>
@@ -20,7 +20,7 @@ namespace OpenFL.Core.Exceptions
         }
 
         /// <summary>
-        /// Constructor
+        ///     Constructor
         /// </summary>
         /// <param name="varname">Code that was used wrongly</param>
         public FLParseError(string varname) : this(varname, null)
