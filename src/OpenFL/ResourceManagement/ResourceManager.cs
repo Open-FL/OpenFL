@@ -68,11 +68,11 @@ namespace OpenFL.ResourceManagement
 
             if (LoadedPacks.ContainsKey(name))
             {
-                ProgressInfo.SetProgress("Loading Package...", 1, 3);
+                ProgressInfo?.SetProgress("Loading Package...", 1, 3);
                 Stream archStream = IOManager.GetStream(LoadedPacks[name].ResourceData);
                 ZipArchive arch = new ZipArchive(archStream);
 
-                ProgressInfo.SetProgress("Preparing Unpackers...", 2, 3);
+                ProgressInfo?.SetProgress("Preparing Unpackers...", 2, 3);
                 Dictionary<string, string[]> unpackers = new Dictionary<string, string[]>(
                                                                                           LoadedPacks[name]
                                                                                               .UnpackerConfig
@@ -136,8 +136,8 @@ namespace OpenFL.ResourceManagement
                                                                                                                           )
                                                                                          );
 
-                ProgressInfo.SetProgress("Unpacking...", 3, 3);
-                IProgressIndicator perFileProgress = ProgressInfo.CreateSubTask();
+                ProgressInfo?.SetProgress("Unpacking...", 3, 3);
+                IProgressIndicator perFileProgress = ProgressInfo?.CreateSubTask();
                 int fileCount = 0;
                 for (int i = 0; i < arch.Entries.Count; i++)
                 {
@@ -158,7 +158,7 @@ namespace OpenFL.ResourceManagement
                                 continue;
                             }
 
-                            perFileProgress.SetProgress(
+                            perFileProgress?.SetProgress(
                                                         "Unpacking:" + arch.Entries[i].FullName,
                                                         fileCount,
                                                         arch.Entries.Count - 1
@@ -168,7 +168,7 @@ namespace OpenFL.ResourceManagement
                                      targetDir,
                                      arch.Entries[i].FullName,
                                      arch.Entries[i].Open(),
-                                     perFileProgress.CreateSubTask()
+                                     perFileProgress?.CreateSubTask()
                                     );
                             unpacked = true;
                             break;
@@ -177,7 +177,7 @@ namespace OpenFL.ResourceManagement
 
                     if (!unpacked)
                     {
-                        perFileProgress.SetProgress(
+                        perFileProgress?.SetProgress(
                                                     "Unpacking:" + arch.Entries[i].FullName,
                                                     fileCount,
                                                     arch.Entries.Count - 1
@@ -200,13 +200,13 @@ namespace OpenFL.ResourceManagement
                                  targetDir,
                                  arch.Entries[i].FullName,
                                  arch.Entries[i].Open(),
-                                 perFileProgress.CreateSubTask()
+                                 perFileProgress?.CreateSubTask()
                                 );
                     }
                 }
 
-                perFileProgress.Dispose();
-                ProgressInfo.Dispose();
+                perFileProgress?.Dispose();
+                ProgressInfo?.Dispose();
             }
         }
 
@@ -218,23 +218,23 @@ namespace OpenFL.ResourceManagement
                                         Name = name,
                                         UnpackerConfig = unpackerConfig
                                     };
-            ProgressInfo.SetProgress("Writing Package Info: " + info, 1, 2);
+            ProgressInfo?.SetProgress("Writing Package Info: " + info, 1, 2);
             XmlSerializer xs = new XmlSerializer(typeof(ResourcePackInfo));
             Stream s = File.OpenWrite(Path.Combine(folder, "Info.xml"));
             xs.Serialize(s, info);
             s.Dispose();
 
-            ProgressInfo.SetProgress("Creating Package from Folder: " + folder, 1, 2);
+            ProgressInfo?.SetProgress("Creating Package from Folder: " + folder, 1, 2);
 
             ZipArchive arch = new ZipArchive(File.OpenWrite(targetFile), ZipArchiveMode.Create);
 
             string[] files = Directory.GetFiles(folder, "*", SearchOption.AllDirectories);
 
-            IProgressIndicator perFileProgressIndicator = ProgressInfo.CreateSubTask();
+            IProgressIndicator perFileProgressIndicator = ProgressInfo?.CreateSubTask();
 
             for (int i = 0; i < files.Length; i++)
             {
-                perFileProgressIndicator.SetProgress("Packing File: " + files[i], i, files.Length - 1);
+                perFileProgressIndicator?.SetProgress("Packing File: " + files[i], i, files.Length - 1);
                 try
                 {
                     string zipLocation = files[i].Replace(folder + "\\", "");

@@ -11,7 +11,7 @@ namespace OpenFL.ResourceManagement
 
         public override void Unpack(string targetDir, string name, Stream stream, IProgressIndicator progressIndicator)
         {
-            progressIndicator.SetProgress($"[{UnpackerName}]Preparing Target Directory...", 1, 2);
+            progressIndicator?.SetProgress($"[{UnpackerName}]Preparing Target Directory...", 1, 2);
             string filePath = Path.Combine(
                                            targetDir,
                                            name.Replace("/", "\\").StartsWith("\\")
@@ -20,11 +20,11 @@ namespace OpenFL.ResourceManagement
                                           );
             Directory.CreateDirectory(Path.GetDirectoryName(filePath));
             Stream s = File.OpenWrite(filePath);
-            progressIndicator.SetProgress($"[{UnpackerName}]Unpacking: {name}", 2, 2);
+            progressIndicator?.SetProgress($"[{UnpackerName}]Unpacking: {name}", 2, 2);
             stream.CopyTo(s);
             s.Close();
             stream.Close();
-            progressIndicator.Dispose();
+            progressIndicator?.Dispose();
         }
 
     }

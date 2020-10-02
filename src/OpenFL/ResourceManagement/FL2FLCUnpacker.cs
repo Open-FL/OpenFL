@@ -45,7 +45,7 @@ namespace OpenFL.ResourceManagement
 
         public override void Unpack(string targetDir, string name, Stream stream, IProgressIndicator progressIndicator)
         {
-            progressIndicator.SetProgress($"[{UnpackerName}]Loading FL Program: {name}", 1, 3);
+            progressIndicator?.SetProgress($"[{UnpackerName}]Loading FL Program: {name}", 1, 3);
             SerializableFLProgram prog = runner.Parser.Process(new FLParserInput(name));
 
             string filePath = Path.Combine(
@@ -57,7 +57,7 @@ namespace OpenFL.ResourceManagement
             Directory.CreateDirectory(Path.GetDirectoryName(filePath));
             filePath = filePath + "c";
 
-            progressIndicator.SetProgress(
+            progressIndicator?.SetProgress(
                                           $"[{UnpackerName}]Writing FL Program Output: {Path.GetFileNameWithoutExtension(name)}",
                                           3,
                                           3
@@ -65,7 +65,7 @@ namespace OpenFL.ResourceManagement
             Stream s = File.OpenWrite(filePath);
             FLSerializer.SaveProgram(s, prog, runner.InstructionSet, new string[0]);
             s.Dispose();
-            progressIndicator.Dispose();
+            progressIndicator?.Dispose();
         }
 
     }
