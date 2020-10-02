@@ -7,6 +7,7 @@ using OpenCL.NET.Memory;
 using OpenCL.Wrapper;
 
 using OpenFL.Core.Buffers;
+using OpenFL.Core.Exceptions;
 using OpenFL.Core.Instructions.Variables;
 
 using Utility.ADL;
@@ -304,7 +305,7 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
 
         public void Run(FLBuffer input, bool makeInputInternal, FLFunction entry = null, bool warmBuffers = false)
         {
-            IFunction entryPoint = entry ?? EntryPoint;
+            IFunction entryPoint = entry ?? (FlFunctions.Any(x=>x.Key==FLKeywords.EntryFunctionKey)? EntryPoint: throw new FLInvalidEntryPointException("'Main' was not Found"));
             if (entryPoint.Name == FLKeywords.EntryFunctionKey)
             {
                 //Debugger?.ProgramStart(this);
