@@ -1,5 +1,6 @@
 ﻿using System;
 
+using OpenCL.NET.Memory;
 using OpenCL.Wrapper;
 
 using OpenFL.Core;
@@ -60,9 +61,9 @@ namespace OpenFL
             CheckBuilder = builder;
         }
 
-        public FLBuffer CreateBuffer(int width, int height, int depth, string name)
+        public FLBuffer CreateBuffer(int width, int height, int depth, string name, bool optimize=false)
         {
-            return new FLBuffer(Instance, width, height, depth, name);
+            return new FLBuffer(Instance, width, height, depth, name, MemoryFlag.ReadWrite, optimize);
         }
 
     }
