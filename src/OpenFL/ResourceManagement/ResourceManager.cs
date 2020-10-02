@@ -41,7 +41,7 @@ namespace OpenFL.ResourceManagement
                     ZipArchive arch = new ZipArchive(archStream);
                     XmlSerializer xs = new XmlSerializer(typeof(ResourcePackInfo));
                     Stream s = arch.GetEntry("Info.xml").Open();
-                    ResourcePackInfo info = (ResourcePackInfo) xs.Deserialize(s);
+                    ResourcePackInfo info = (ResourcePackInfo)xs.Deserialize(s);
                     info.ResourceData = packPath;
                     LoadedPacks[info.Name] = info;
                     s.Dispose();
@@ -97,10 +97,10 @@ namespace OpenFL.ResourceManagement
                                                                                                                                  []
                                                                                                                              >(
                                                                                                                                x.Split(
-                                                                                                                                       '|'
+                                                                                                                                       '+'
                                                                                                                                       )[0],
                                                                                                                                x.Split(
-                                                                                                                                       '|'
+                                                                                                                                       '+'
                                                                                                                                       )
                                                                                                                               );
                                                                                                                  List<
@@ -108,6 +108,7 @@ namespace OpenFL.ResourceManagement
                                                                                                                  > temp
                                                                                                                      = ret
                                                                                                                        .Value
+                                                                                                                       .Select(y => y == "" ? y : "." + y)
                                                                                                                        .ToList();
                                                                                                                  temp
                                                                                                                      .RemoveAt(
@@ -214,10 +215,10 @@ namespace OpenFL.ResourceManagement
             string folder, string targetFile, string name, string unpackerConfig, IProgressIndicator ProgressInfo)
         {
             ResourcePackInfo info = new ResourcePackInfo
-                                    {
-                                        Name = name,
-                                        UnpackerConfig = unpackerConfig
-                                    };
+            {
+                Name = name,
+                UnpackerConfig = unpackerConfig
+            };
             ProgressInfo?.SetProgress("Writing Package Info: " + info, 1, 2);
             XmlSerializer xs = new XmlSerializer(typeof(ResourcePackInfo));
             Stream s = File.OpenWrite(Path.Combine(folder, "Info.xml"));
@@ -237,7 +238,7 @@ namespace OpenFL.ResourceManagement
                 perFileProgressIndicator?.SetProgress("Packing File: " + files[i], i, files.Length - 1);
                 try
                 {
-                    string zipLocation = files[i].Replace(folder + "\\", "");
+                    string zipLocation = files[i].Replace(folder.EndsWith("\\") || folder.EndsWith("/") ? folder : folder + "\\", "");
                     ZipArchiveEntry entry = arch.CreateEntry(zipLocation);
                     Stream filestr = File.OpenRead(files[i]);
                     Stream zipstr = entry.Open();

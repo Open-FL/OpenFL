@@ -45,6 +45,8 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
             }
         }
 
+        public bool HasMain => FlFunctions.Any(x => x.Key == FLKeywords.EntryFunctionKey);
+
         //Get set when calling Run/SetCLVariables
         public CLAPI Instance { get; }
 
@@ -305,7 +307,7 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
 
         public void Run(FLBuffer input, bool makeInputInternal, FLFunction entry = null, bool warmBuffers = false)
         {
-            IFunction entryPoint = entry ?? (FlFunctions.Any(x=>x.Key==FLKeywords.EntryFunctionKey)? EntryPoint: throw new FLInvalidEntryPointException("'Main' was not Found"));
+            IFunction entryPoint = entry ?? (HasMain ? EntryPoint : throw new FLInvalidEntryPointException("'Main' was not Found"));
             if (entryPoint.Name == FLKeywords.EntryFunctionKey)
             {
                 //Debugger?.ProgramStart(this);

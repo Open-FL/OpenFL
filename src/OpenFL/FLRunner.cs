@@ -90,6 +90,10 @@ namespace OpenFL
 
         public CLAPI Instance { get; }
 
+        public FLProgram Build(SerializableFLProgram file)
+        {
+            return file.Initialize(Instance, InstructionSet);
+        }
 
         public FLProgram Run(string file, int width, int height, int depth)
         {
@@ -98,7 +102,7 @@ namespace OpenFL
 
         public FLProgram Run(SerializableFLProgram file, int width, int height, int depth)
         {
-            return Run(file.Initialize(Instance, InstructionSet), width, height, depth);
+            return Run(Build(file), width, height, depth);
         }
 
         public FLProgram Run(FLProgram file, int width, int height, int depth)

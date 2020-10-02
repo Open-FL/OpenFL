@@ -59,7 +59,7 @@ namespace OpenFL.ResourceManagement
                                                : name.Replace("/", "\\")
                                           );
             Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-            filePath = filePath.Replace(".flc", ".png");
+            filePath = filePath.Remove(filePath.Length-3, 3)+"png";
 
             progressIndicator?.SetProgress(
                                           $"[{UnpackerName}]Writing FL Program Output: {Path.GetFileNameWithoutExtension(name)}",

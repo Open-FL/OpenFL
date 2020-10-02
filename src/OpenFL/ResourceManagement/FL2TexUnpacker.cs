@@ -1,5 +1,7 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.IO;
+using System.Linq;
 
 using OpenCL.Wrapper;
 
@@ -47,30 +49,52 @@ namespace OpenFL.ResourceManagement
         public override void Unpack(string targetDir, string name, Stream stream, IProgressIndicator progressIndicator)
         {
             progressIndicator?.SetProgress($"[{UnpackerName}]Loading FL Program: {name}", 1, 3);
-            SerializableFLProgram prog = runner.Parser.Process(new FLParserInput(name));
+            FLProgram p=null;
+            try
+            {
+                SerializableFLProgram prog = runner.Parser.Process(
+                                                               new FLParserInput(
+                                                                                 name,
+                                                                                 new StreamReader(stream)
+                                                                                 .ReadToEnd().Split('\n')
+                                                                                 .Select(x => x.Trim()).ToArray(),
+                                                                                 true
+                                                                                )
+                                                              );
 
-            progressIndicator?.SetProgress($"[{UnpackerName}]Running FL Program: {name}", 2, 3);
-            FLProgram p = runner.Run(prog, 512, 512, 1);
+                progressIndicator?.SetProgress($"[{UnpackerName}]Running FL Program: {name}", 2, 3);
 
-            string filePath = Path.Combine(
-                                           targetDir,
-                                           name.Replace("/", "\\").StartsWith("\\")
-                                               ? name.Replace("/", "\\").Substring(1)
-                                               : name.Replace("/", "\\")
-                                          );
-            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-            filePath = filePath.Replace(".flc", ".png");
 
-            progressIndicator?.SetProgress(
-                                          $"[{UnpackerName}]Writing FL Program Output: {Path.GetFileNameWithoutExtension(name)}",
-                                          3,
-                                          3
-                                         );
-            Bitmap bmp = new Bitmap(512, 512);
-            CLAPI.UpdateBitmap(runner.Instance, bmp, p.GetActiveBuffer(false).Buffer);
-            bmp.Save(filePath);
+                p = runner.Build(prog);
+                if (p.HasMain)
+                {
+                    runner.Run(p, 512, 512, 1);
+
+                    string filePath = Path.Combine(
+                                                   targetDir,
+                                                   name.Replace("/", "\\").StartsWith("\\")
+                                                       ? name.Replace("/", "\\").Substring(1)
+                                                       : name.Replace("/", "\\")
+                                                  );
+                    Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+                    filePath = filePath.Remove(filePath.Length-2, 2)+"png";
+
+                    progressIndicator?.SetProgress(
+                                                   $"[{UnpackerName}]Writing FL Program Output: {Path.GetFileNameWithoutExtension(name)}",
+                                                   3,
+                                                   3
+                                                  );
+                    Bitmap bmp = new Bitmap(512, 512);
+                    CLAPI.UpdateBitmap(runner.Instance, bmp, p.GetActiveBuffer(false).Buffer);
+                    bmp.Save(filePath);
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
             stream.Close();
-            p.FreeResources();
+            p?.FreeResources();
             progressIndicator?.Dispose();
         }
 
