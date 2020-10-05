@@ -37,6 +37,16 @@ namespace OpenFL.Core.ElementModifiers
             return new List<string>(Modifiers);
         }
 
+
+        public void AddModifier(string mod)
+        {
+            if (!Modifiers.Contains(mod))
+            {
+                Modifiers.Add(mod);
+                InternalValidate();
+            }
+        }
+        
         private void InternalValidate()
         {
             for (int i = 0; i < Modifiers.Count; i++)

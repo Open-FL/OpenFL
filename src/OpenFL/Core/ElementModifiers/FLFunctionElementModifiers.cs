@@ -24,7 +24,8 @@ namespace OpenFL.Core.ElementModifiers
                 FLKeywords.NoJumpKeyword,
                 FLKeywords.NoCallKeyword,
                 FLKeywords.ComputeOnceKeyword,
-                FLKeywords.InitializeOnStartKey
+                FLKeywords.InitializeOnStartKey,
+                FLKeywords.OptimizeBufferCreationKeyword
             };
 
         public virtual bool IsStatic => Modifiers.Contains(FLKeywords.StaticElementModifier);
