@@ -5,7 +5,7 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
     public abstract class FLParsedObject : ALoggable<LogType>, IParsedObject
     {
 
-        protected FLParsedObject() : base(OpenFLDebugConfig.Settings)
+        protected FLParsedObject(string name) : base(OpenFLDebugConfig.Settings, name)
         {
         }
 

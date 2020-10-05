@@ -8,14 +8,14 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
     public class FLFunction : FLParsedObject, IFunction
     {
 
-        public FLFunction(string name, List<FLInstruction> instructions, FLFunctionElementModifiers mods)
+        public FLFunction(string name, List<FLInstruction> instructions, FLFunctionElementModifiers mods) : base("func")
         {
             Name = name;
             Instructions = instructions;
             Modifiers = mods;
         }
 
-        internal FLFunction(string name, FLFunctionElementModifiers mods)
+        internal FLFunction(string name, FLFunctionElementModifiers mods):base("func")
         {
             Name = name;
             Modifiers = mods;

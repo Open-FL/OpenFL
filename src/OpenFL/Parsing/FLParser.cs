@@ -24,7 +24,7 @@ namespace OpenFL.Parsing
     {
 
         private static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(OpenFLDebugConfig.Settings, "FLParserPipeline");
+            new ADLLogger<LogType>(OpenFLDebugConfig.Settings, "Parser");
 
 
         static FLParser()

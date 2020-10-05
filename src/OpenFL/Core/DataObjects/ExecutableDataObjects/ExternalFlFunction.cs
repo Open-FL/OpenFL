@@ -14,7 +14,7 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
 
         public ExternalFlFunction(
             string name, SerializableFLProgram external, FLInstructionSet iset,
-            FLExecutableElementModifiers modifiers)
+            FLExecutableElementModifiers modifiers):base("ext-func")
         {
             Name = name;
             Modifiers = modifiers;

@@ -14,7 +14,7 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
 
         private FLFunction Parent;
 
-        public FLInstructionArgument(ImplicitCastBox value)
+        public FLInstructionArgument(ImplicitCastBox value) : base("arg")
         {
             Value = value;
         }

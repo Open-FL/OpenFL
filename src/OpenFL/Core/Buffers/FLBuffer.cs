@@ -62,7 +62,7 @@ namespace OpenFL.Core.Buffers
         ///     The Internal Constructor
         /// </summary>
         /// <param name="buffer">The inner buffer</param>
-        public FLBuffer(MemoryBuffer buffer, int width, int height, int depth)
+        public FLBuffer(MemoryBuffer buffer, int width, int height, int depth) : base("buf")
         {
             Width = width;
             Height = height;

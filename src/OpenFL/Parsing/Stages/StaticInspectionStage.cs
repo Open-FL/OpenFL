@@ -19,7 +19,7 @@ namespace OpenFL.Parsing.Stages
     {
 
         private static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(OpenFLDebugConfig.Settings, "StaticInspectionStage");
+            new ADLLogger<LogType>(OpenFLDebugConfig.Settings, "StaticSrc");
 
         private readonly FLParser parser;
 

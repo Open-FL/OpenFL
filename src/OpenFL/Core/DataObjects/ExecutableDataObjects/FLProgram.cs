@@ -32,7 +32,7 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
 
         public FLProgram(
             CLAPI instance, Dictionary<string, IFunction> definedScripts,
-            Dictionary<string, FLBuffer> definedBuffers, Dictionary<string, IFunction> flFunctions)
+            Dictionary<string, FLBuffer> definedBuffers, Dictionary<string, IFunction> flFunctions) : base("prg")
         {
             Instance = instance;
             FlFunctions = flFunctions;

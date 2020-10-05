@@ -8,7 +8,7 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
         protected const int MIN_INSTRUCTION_SEVERITY = 4;
         protected FLFunction Parent;
 
-        protected FLInstruction(List<FLInstructionArgument> arguments)
+        protected FLInstruction(List<FLInstructionArgument> arguments) : base("instr")
         {
             Arguments = arguments;
         }
