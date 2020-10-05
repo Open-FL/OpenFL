@@ -49,7 +49,7 @@ namespace OpenFL.Core
 
             for (int i = 0; i < program.Functions.Count; i++)
             {
-                functions.Add(program.Functions[i].Name, new FLFunction(program.Functions[i].Name));
+                functions.Add(program.Functions[i].Name, new FLFunction(program.Functions[i].Name, program.Functions[i].Modifiers));
             }
 
             FLProgram p = new FLProgram(instance, externalFunctions, buffers, functions);

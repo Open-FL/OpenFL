@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 
+using OpenFL.Core.ElementModifiers;
 using OpenFL.Core.Instructions.Variables;
 
 namespace OpenFL.Core.DataObjects.ExecutableDataObjects
@@ -7,16 +8,20 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
     public class FLFunction : FLParsedObject, IFunction
     {
 
-        public FLFunction(string name, List<FLInstruction> instructions)
+        public FLFunction(string name, List<FLInstruction> instructions, FLFunctionElementModifiers mods)
         {
             Name = name;
             Instructions = instructions;
+            Modifiers = mods;
         }
 
-        internal FLFunction(string name)
+        internal FLFunction(string name, FLFunctionElementModifiers mods)
         {
             Name = name;
+            Modifiers = mods;
         }
+
+        public FLExecutableElementModifiers Modifiers { get; }
 
         public List<FLInstruction> Instructions { get; private set; }
 
