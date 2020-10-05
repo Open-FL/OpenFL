@@ -20,10 +20,6 @@ namespace OpenFL
         public readonly BufferCreator BufferCreator;
 
 
-        private readonly FL2FLCUnpacker fl2flc;
-        private readonly FLRESUnpacker fl2res;
-        private readonly FL2TexUnpacker fl2tex;
-        private readonly FLC2TexUnpacker flc2tex;
         public readonly CLAPI Instance;
         public readonly FLInstructionSet InstructionSet;
         public readonly FLParser Parser;

@@ -25,7 +25,6 @@ namespace OpenFL.Serialization.Serializers.Internal
         {
             instructionSet = iset;
             BufferSerializer = Byt3Serializer.GetDefaultSerializer();
-            int i = 0;
             foreach (KeyValuePair<Type, FLBaseSerializer> keyValuePair in serializers)
             {
                 BufferSerializer.AddSerializer(keyValuePair.Key, keyValuePair.Value);

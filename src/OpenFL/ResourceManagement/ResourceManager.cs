@@ -246,7 +246,7 @@ namespace OpenFL.ResourceManagement
                     filestr.Close();
                     zipstr.Close();
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                 }
             }

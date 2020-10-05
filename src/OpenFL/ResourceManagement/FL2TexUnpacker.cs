@@ -89,7 +89,7 @@ namespace OpenFL.ResourceManagement
                     bmp.Save(filePath);
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
             }
