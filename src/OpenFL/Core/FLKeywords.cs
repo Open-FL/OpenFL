@@ -25,6 +25,7 @@
 
         public static string NoJumpKeyword = "nojump";
         public static string NoCallKeyword = "nocall";
+        public static string OptimizeBufferCreationKeyword = "optimizecall";
         public static string ComputeOnceKeyword = "once";
         public static string InitializeOnStartKey = "init";
 

@@ -14,9 +14,8 @@ namespace OpenFL.Core.ProgramChecks
     {
 
         private static readonly ProjectDebugConfig Settings = new ProjectDebugConfig(
-             "OpenFL.Common.ProgramChecks",
+             "FL-Check",
              -1,
-             4,
              PrefixLookupSettings
                  .AddPrefixIfAvailable
             );
