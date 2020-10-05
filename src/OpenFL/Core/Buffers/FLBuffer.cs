@@ -16,18 +16,18 @@ namespace OpenFL.Core.Buffers
 
         public FLBuffer(
             CLAPI instance, int width, int height, int depth, object handleIdentifier,
-            MemoryFlag flag = MemoryFlag.ReadWrite, bool optimize=false) : this(
-                                                           CLAPI.CreateEmpty<byte>(
-                                                                                   instance,
-                                                                                   width * height * depth * 4,
-                                                                                   flag,
-                                                                                   handleIdentifier,
-                                                                                   optimize
-                                                                                  ),
-                                                           width,
-                                                           height,
-                                                           depth
-                                                          )
+            MemoryFlag flag = MemoryFlag.ReadWrite, bool optimize = false) : this(
+             CLAPI.CreateEmpty<byte>(
+                                     instance,
+                                     width * height * depth * 4,
+                                     flag,
+                                     handleIdentifier,
+                                     optimize
+                                    ),
+             width,
+             height,
+             depth
+            )
         {
         }
 
@@ -46,11 +46,11 @@ namespace OpenFL.Core.Buffers
             CLAPI instance, Bitmap bitmap, object handleIdentifier,
             MemoryFlag flag = MemoryFlag.ReadWrite) : this(
                                                            CLAPI.CreateFromImage(
-                                                                                 instance,
-                                                                                 bitmap,
-                                                                                 flag,
-                                                                                 handleIdentifier
-                                                                                ),
+                                                                instance,
+                                                                bitmap,
+                                                                flag,
+                                                                handleIdentifier
+                                                               ),
                                                            bitmap.Width,
                                                            bitmap.Height,
                                                            1

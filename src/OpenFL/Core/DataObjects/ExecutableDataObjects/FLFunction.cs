@@ -33,10 +33,10 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
                 FLDebuggerHelper.OnInstructionStepInto(
                                                        Root,
                                                        new FLDebuggerEvents.InstructionRunEventArgs(
-                                                                                                    Root,
-                                                                                                    this,
-                                                                                                    Instructions[i]
-                                                                                                   )
+                                                            Root,
+                                                            this,
+                                                            Instructions[i]
+                                                           )
                                                       );
 
                 //FLProgram.Debugger?.ProcessEvent(Instructions[i]);
@@ -44,10 +44,10 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
                 FLDebuggerHelper.AfterInstruction(
                                                   Root,
                                                   new FLDebuggerEvents.InstructionRunEventArgs(
-                                                                                               Root,
-                                                                                               this,
-                                                                                               Instructions[i]
-                                                                                              )
+                                                       Root,
+                                                       this,
+                                                       Instructions[i]
+                                                      )
                                                  );
             }
 

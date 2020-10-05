@@ -28,7 +28,7 @@ namespace OpenFL.Core.Arguments
                                                     () =>
                                                     {
                                                         int idx = (int) (decimal) Index
-                                                                                  .GetValue(script, func).GetValue();
+                                                            .GetValue(script, func).GetValue();
                                                         return buffer.GetData()[idx];
                                                     }
                                                    ); //really slow

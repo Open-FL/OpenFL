@@ -307,17 +307,20 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
 
         public void Run(FLBuffer input, bool makeInputInternal, FLFunction entry = null, bool warmBuffers = false)
         {
-            IFunction entryPoint = entry ?? (HasMain ? EntryPoint : throw new FLInvalidEntryPointException("'Main' was not Found"));
+            IFunction entryPoint = entry ??
+                                   (HasMain
+                                        ? EntryPoint
+                                        : throw new FLInvalidEntryPointException("'Main' was not Found"));
             if (entryPoint.Name == FLKeywords.EntryFunctionKey)
             {
                 //Debugger?.ProgramStart(this);
                 FLDebuggerHelper.OnProgramStart(
                                                 this,
                                                 new FLDebuggerEvents.ProgramStartEventArgs(
-                                                                                           this,
-                                                                                           entryPoint,
-                                                                                           warmBuffers
-                                                                                          )
+                                                     this,
+                                                     entryPoint,
+                                                     warmBuffers
+                                                    )
                                                );
             }
 

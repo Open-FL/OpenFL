@@ -17,10 +17,10 @@ namespace OpenFL.Core.Buffers
 
 
         public LazyFromFileFLBuffer(string file, bool isArray, int size, FLBufferModifiers modifiers) : base(
-                                                                                                             null,
-                                                                                                             modifiers
-                                                                                                                 .InitializeOnStart
-                                                                                                            )
+             null,
+             modifiers
+                 .InitializeOnStart
+            )
         {
             File = file;
             MemoryFlag flag = modifiers.IsReadOnly ? MemoryFlag.ReadOnly : MemoryFlag.ReadWrite;

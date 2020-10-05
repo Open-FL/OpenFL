@@ -18,11 +18,11 @@ namespace OpenFL.Threading
         public FlMultiThreadScriptRunner(
             Action onFinishQueueCallback,
             DataVectorTypes dataVectorTypes = DataVectorTypes.Uchar1, string kernelFolder = "resources/kernel") : base(
-                                                                                                                       CLAPI
-                                                                                                                           .GetInstance(),
-                                                                                                                       dataVectorTypes,
-                                                                                                                       kernelFolder
-                                                                                                                      )
+             CLAPI
+                 .GetInstance(),
+             dataVectorTypes,
+             kernelFolder
+            )
         {
             OnFinishQueue = onFinishQueueCallback;
         }

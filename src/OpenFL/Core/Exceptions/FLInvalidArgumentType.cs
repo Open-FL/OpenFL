@@ -17,9 +17,9 @@ namespace OpenFL.Core.Exceptions
         /// <param name="expected">The expected value for the variable</param>
         /// <param name="inner">Inner exeption</param>
         public FLInvalidArgumentType(string varname, string expected, Exception inner) : base(
-                                                                                              $"Argument {varname} has the wrong type or is Null. Expected: {expected}",
-                                                                                              inner
-                                                                                             )
+             $"Argument {varname} has the wrong type or is Null. Expected: {expected}",
+             inner
+            )
         {
         }
 

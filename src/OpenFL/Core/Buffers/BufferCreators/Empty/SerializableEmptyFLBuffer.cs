@@ -30,12 +30,12 @@ namespace OpenFL.Core.Buffers.BufferCreators.BuiltIn.Empty
                                                root =>
                                                    new FLBuffer(
                                                                 CLAPI.CreateEmpty<byte>(
-                                                                                        root.Instance,
-                                                                                        root.InputSize,
-                                                                                        flag,
-                                                                                        "EmptySerializableBuffer." +
-                                                                                        Name
-                                                                                       ),
+                                                                     root.Instance,
+                                                                     root.InputSize,
+                                                                     flag,
+                                                                     "EmptySerializableBuffer." +
+                                                                     Name
+                                                                    ),
                                                                 root.Dimensions.x,
                                                                 root.Dimensions.y,
                                                                 root.Dimensions.z
@@ -48,11 +48,11 @@ namespace OpenFL.Core.Buffers.BufferCreators.BuiltIn.Empty
                                            root =>
                                                new FLBuffer(
                                                             CLAPI.CreateEmpty<byte>(
-                                                                                    root.Instance,
-                                                                                    Size,
-                                                                                    flag,
-                                                                                    "EmptySerializableBuffer." + Name
-                                                                                   ),
+                                                                 root.Instance,
+                                                                 Size,
+                                                                 flag,
+                                                                 "EmptySerializableBuffer." + Name
+                                                                ),
                                                             Size,
                                                             1,
                                                             1

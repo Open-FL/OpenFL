@@ -63,10 +63,10 @@ namespace OpenFL.Core
 
             public SubProgramStartEventArgs(
                 FLProgram root, ExternalFlFunction externalSymbol, IFunction entryFunction, bool warmBuffers) : base(
-                                                                                                                     root,
-                                                                                                                     entryFunction,
-                                                                                                                     warmBuffers
-                                                                                                                    )
+                 root,
+                 entryFunction,
+                 warmBuffers
+                )
             {
                 ExternalSymbol = externalSymbol;
             }

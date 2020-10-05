@@ -34,11 +34,11 @@ namespace OpenFL.ResourceManagement
                                   iset,
                                   bc,
                                   FLProgramCheckBuilder.CreateDefaultCheckBuilder(
-                                                                                  iset,
-                                                                                  bc,
-                                                                                  FLProgramCheckType
-                                                                                      .InputValidationOptimized
-                                                                                 )
+                                       iset,
+                                       bc,
+                                       FLProgramCheckType
+                                           .InputValidationOptimized
+                                      )
                                  );
         }
 
@@ -59,13 +59,13 @@ namespace OpenFL.ResourceManagement
                                                : name.Replace("/", "\\")
                                           );
             Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-            filePath = filePath.Remove(filePath.Length-3, 3)+"png";
+            filePath = filePath.Remove(filePath.Length - 3, 3) + "png";
 
             progressIndicator?.SetProgress(
-                                          $"[{UnpackerName}]Writing FL Program Output: {Path.GetFileNameWithoutExtension(name)}",
-                                          3,
-                                          3
-                                         );
+                                           $"[{UnpackerName}]Writing FL Program Output: {Path.GetFileNameWithoutExtension(name)}",
+                                           3,
+                                           3
+                                          );
             Bitmap bmp = new Bitmap(512, 512);
             CLAPI.UpdateBitmap(runner.Instance, bmp, p.GetActiveBuffer(false).Buffer);
             bmp.Save(filePath);

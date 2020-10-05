@@ -13,9 +13,9 @@ namespace OpenFL.Core.Buffers.BufferCreators.BuiltIn.FromFile
         public readonly int Size;
 
         public SerializableFromBitmapFLBuffer(string name, Bitmap bmp, FLBufferModifiers modifiers, int size) : base(
-                                                                                                                     name,
-                                                                                                                     modifiers
-                                                                                                                    )
+             name,
+             modifiers
+            )
         {
             Bitmap = bmp;
             Size = size;

@@ -11,11 +11,11 @@ namespace OpenFL.Core.Buffers.BufferCreators.BuiltIn.FromFile
     {
 
         public SerializableFromFileFLBuffer(string name, string file, FLBufferModifiers modifiers, int size) : base(
-                                                                                                                    name,
-                                                                                                                    null,
-                                                                                                                    modifiers,
-                                                                                                                    size
-                                                                                                                   )
+             name,
+             null,
+             modifiers,
+             size
+            )
         {
             File = file;
         }

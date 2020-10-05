@@ -26,10 +26,10 @@ namespace OpenFL.Core.Parsing.StageResults
         }
 
         public FLParserInput(string filename, string[] source, bool mainFile, params string[] defines) : this(
-                                                                                                              filename,
-                                                                                                              mainFile,
-                                                                                                              defines
-                                                                                                             )
+             filename,
+             mainFile,
+             defines
+            )
         {
             Source = source;
         }

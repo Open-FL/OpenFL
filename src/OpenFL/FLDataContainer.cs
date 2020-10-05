@@ -10,7 +10,6 @@ using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.Instructions.InstructionCreators;
 using OpenFL.Core.ProgramChecks;
 using OpenFL.Parsing;
-using OpenFL.ResourceManagement;
 
 namespace OpenFL
 {
@@ -57,7 +56,7 @@ namespace OpenFL
             CheckBuilder = builder;
         }
 
-        public FLBuffer CreateBuffer(int width, int height, int depth, string name, bool optimize=false)
+        public FLBuffer CreateBuffer(int width, int height, int depth, string name, bool optimize = false)
         {
             return new FLBuffer(Instance, width, height, depth, name, MemoryFlag.ReadWrite, optimize);
         }

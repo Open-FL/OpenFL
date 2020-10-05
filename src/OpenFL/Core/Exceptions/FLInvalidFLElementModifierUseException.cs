@@ -17,11 +17,11 @@ namespace OpenFL.Core.Exceptions
         }
 
         public FLInvalidFLElementModifierUseException(string function, string modifer, string errorMessage) : this(
-                                                                                                                   function,
-                                                                                                                   modifer,
-                                                                                                                   errorMessage,
-                                                                                                                   null
-                                                                                                                  )
+             function,
+             modifer,
+             errorMessage,
+             null
+            )
         {
         }
 

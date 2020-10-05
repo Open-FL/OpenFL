@@ -16,11 +16,11 @@ namespace OpenFL.Serialization.Serializers.Internal.FileFormatSerializer
                                                                             {
                                                                                 {
                                                                                     "zip", new ExtraStage(
-                                                                                                          new
-                                                                                                              ZipExtraStage(),
-                                                                                                          new
-                                                                                                              UnZipExtraStage()
-                                                                                                         )
+                                                                                         new
+                                                                                             ZipExtraStage(),
+                                                                                         new
+                                                                                             UnZipExtraStage()
+                                                                                        )
                                                                                 }
                                                                             };
 

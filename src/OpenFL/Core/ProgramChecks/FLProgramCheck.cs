@@ -14,12 +14,12 @@ namespace OpenFL.Core.ProgramChecks
     {
 
         private static readonly ProjectDebugConfig Settings = new ProjectDebugConfig(
-                                                                                     "OpenFL.Common.ProgramChecks",
-                                                                                     -1,
-                                                                                     4,
-                                                                                     PrefixLookupSettings
-                                                                                         .AddPrefixIfAvailable
-                                                                                    );
+             "OpenFL.Common.ProgramChecks",
+             -1,
+             4,
+             PrefixLookupSettings
+                 .AddPrefixIfAvailable
+            );
 
         private static readonly Dictionary<Type, ADLLogger<LogType>> CreatedLoggers =
             new Dictionary<Type, ADLLogger<LogType>>();

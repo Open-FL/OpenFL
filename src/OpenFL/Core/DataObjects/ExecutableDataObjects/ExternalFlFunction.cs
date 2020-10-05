@@ -38,12 +38,12 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
             FLDebuggerHelper.OnSubProgramStart(
                                                Root,
                                                new FLDebuggerEvents.SubProgramStartEventArgs(
-                                                                                             externalFunction,
-                                                                                             this,
-                                                                                             externalFunction
-                                                                                                 .EntryPoint,
-                                                                                             false
-                                                                                            )
+                                                    externalFunction,
+                                                    this,
+                                                    externalFunction
+                                                        .EntryPoint,
+                                                    false
+                                                   )
                                               );
 
             //FLDebuggerHelper.OnProgramStart(externalFunction, new FLDebuggerEvents.ProgramStartEventArgs(externalFunction, externalFunction.EntryPoint, false, false));

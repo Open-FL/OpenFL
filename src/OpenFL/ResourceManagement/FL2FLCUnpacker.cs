@@ -33,11 +33,11 @@ namespace OpenFL.ResourceManagement
                                   iset,
                                   bc,
                                   FLProgramCheckBuilder.CreateDefaultCheckBuilder(
-                                                                                  iset,
-                                                                                  bc,
-                                                                                  FLProgramCheckType
-                                                                                      .InputValidationOptimized
-                                                                                 )
+                                       iset,
+                                       bc,
+                                       FLProgramCheckType
+                                           .InputValidationOptimized
+                                      )
                                  );
         }
 
@@ -58,10 +58,10 @@ namespace OpenFL.ResourceManagement
             filePath = filePath + "c";
 
             progressIndicator?.SetProgress(
-                                          $"[{UnpackerName}]Writing FL Program Output: {Path.GetFileNameWithoutExtension(name)}",
-                                          3,
-                                          3
-                                         );
+                                           $"[{UnpackerName}]Writing FL Program Output: {Path.GetFileNameWithoutExtension(name)}",
+                                           3,
+                                           3
+                                          );
             Stream s = File.OpenWrite(filePath);
             FLSerializer.SaveProgram(s, prog, runner.InstructionSet, new string[0]);
             s.Dispose();

@@ -34,31 +34,31 @@ namespace OpenFL
         }
 
         public FLRunner(CLAPI instance, FLInstructionSet instructionSet, BufferCreator bufferCreator) : this(
-                                                                                                             instance,
-                                                                                                             instructionSet,
-                                                                                                             bufferCreator,
-                                                                                                             FLProgramCheckBuilder
-                                                                                                                 .CreateDefaultCheckBuilder(
-                                                                                                                                            instructionSet,
-                                                                                                                                            bufferCreator
-                                                                                                                                           )
-                                                                                                            )
+             instance,
+             instructionSet,
+             bufferCreator,
+             FLProgramCheckBuilder
+                 .CreateDefaultCheckBuilder(
+                                            instructionSet,
+                                            bufferCreator
+                                           )
+            )
         {
         }
 
         public FLRunner(FLInstructionSet instructionSet, BufferCreator bufferCreator) : this(
-                                                                                             CLAPI.MainThread,
-                                                                                             instructionSet,
-                                                                                             bufferCreator
-                                                                                            )
+             CLAPI.MainThread,
+             instructionSet,
+             bufferCreator
+            )
         {
         }
 
         public FLRunner(CLAPI instance, KernelDatabase database) : this(
                                                                         instance,
                                                                         FLInstructionSet.CreateWithBuiltInTypes(
-                                                                                                                database
-                                                                                                               ),
+                                                                             database
+                                                                            ),
                                                                         BufferCreator.CreateWithBuiltInTypes()
                                                                        )
         {
@@ -70,9 +70,9 @@ namespace OpenFL
 
         public FLRunner(CLAPI instance, string kernelPath) : this(
                                                                   FLInstructionSet.CreateWithBuiltInTypes(
-                                                                                                          instance,
-                                                                                                          kernelPath
-                                                                                                         ),
+                                                                       instance,
+                                                                       kernelPath
+                                                                      ),
                                                                   BufferCreator.CreateWithBuiltInTypes()
                                                                  )
         {

@@ -17,12 +17,12 @@ namespace OpenFL.Core.Exceptions
         /// <param name="errorMessage">The Error message that explains what went wrong</param>
         /// <param name="inner">Inner exeption</param>
         public FLInvalidFunctionUseException(string function, string errorMessage, Exception inner) : base(
-                                                                                                           "The function " +
-                                                                                                           function +
-                                                                                                           " is used incorrectly: \n" +
-                                                                                                           errorMessage,
-                                                                                                           inner
-                                                                                                          )
+             "The function " +
+             function +
+             " is used incorrectly: \n" +
+             errorMessage,
+             inner
+            )
         {
         }
 

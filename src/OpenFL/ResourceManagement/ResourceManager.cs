@@ -41,7 +41,7 @@ namespace OpenFL.ResourceManagement
                     ZipArchive arch = new ZipArchive(archStream);
                     XmlSerializer xs = new XmlSerializer(typeof(ResourcePackInfo));
                     Stream s = arch.GetEntry("Info.xml").Open();
-                    ResourcePackInfo info = (ResourcePackInfo)xs.Deserialize(s);
+                    ResourcePackInfo info = (ResourcePackInfo) xs.Deserialize(s);
                     info.ResourceData = packPath;
                     LoadedPacks[info.Name] = info;
                     s.Dispose();
@@ -74,68 +74,68 @@ namespace OpenFL.ResourceManagement
 
                 ProgressInfo?.SetProgress("Preparing Unpackers...", 2, 3);
                 Dictionary<string, string[]> unpackers = new Dictionary<string, string[]>(
-                                                                                          LoadedPacks[name]
-                                                                                              .UnpackerConfig
-                                                                                              .Split(
-                                                                                                     new[] { ';' },
-                                                                                                     StringSplitOptions
-                                                                                                         .RemoveEmptyEntries
-                                                                                                    ).Select(
-                                                                                                             x =>
-                                                                                                             {
-                                                                                                                 KeyValuePair
-                                                                                                                     <string
-                                                                                                                       , string
-                                                                                                                         []
-                                                                                                                     >
-                                                                                                                     ret
-                                                                                                                         =
-                                                                                                                         new
-                                                                                                                             KeyValuePair
-                                                                                                                             <string
-                                                                                                                               , string
-                                                                                                                                 []
-                                                                                                                             >(
-                                                                                                                               x.Split(
-                                                                                                                                       '+'
-                                                                                                                                      )[0],
-                                                                                                                               x.Split(
-                                                                                                                                       '+'
-                                                                                                                                      )
-                                                                                                                              );
-                                                                                                                 List<
-                                                                                                                     string
-                                                                                                                 > temp
-                                                                                                                     = ret
-                                                                                                                       .Value
-                                                                                                                       .Select(y => y == "" ? y : "." + y)
-                                                                                                                       .ToList();
-                                                                                                                 temp
-                                                                                                                     .RemoveAt(
-                                                                                                                               0
-                                                                                                                              );
-                                                                                                                 ret =
-                                                                                                                     new
-                                                                                                                         KeyValuePair
-                                                                                                                         <string
-                                                                                                                           , string
-                                                                                                                             []
-                                                                                                                         >(
-                                                                                                                           ret
-                                                                                                                               .Key,
-                                                                                                                           temp
-                                                                                                                               .ToArray()
-                                                                                                                          );
-                                                                                                                 return
-                                                                                                                     ret;
-                                                                                                             }
-                                                                                                            ).ToDictionary(
-                                                                                                                           x =>
-                                                                                                                               x.Key,
-                                                                                                                           y =>
-                                                                                                                               y.Value
-                                                                                                                          )
-                                                                                         );
+                     LoadedPacks[name]
+                         .UnpackerConfig
+                         .Split(
+                                new[] { ';' },
+                                StringSplitOptions
+                                    .RemoveEmptyEntries
+                               ).Select(
+                                        x =>
+                                        {
+                                            KeyValuePair
+                                                <string
+                                                  , string
+                                                    []
+                                                >
+                                                ret
+                                                    =
+                                                    new
+                                                        KeyValuePair
+                                                        <string
+                                                          , string
+                                                            []
+                                                        >(
+                                                          x.Split(
+                                                                  '+'
+                                                                 )[0],
+                                                          x.Split(
+                                                                  '+'
+                                                                 )
+                                                         );
+                                            List<
+                                                string
+                                            > temp
+                                                = ret
+                                                  .Value
+                                                  .Select(y => y == "" ? y : "." + y)
+                                                  .ToList();
+                                            temp
+                                                .RemoveAt(
+                                                          0
+                                                         );
+                                            ret =
+                                                new
+                                                    KeyValuePair
+                                                    <string
+                                                      , string
+                                                        []
+                                                    >(
+                                                      ret
+                                                          .Key,
+                                                      temp
+                                                          .ToArray()
+                                                     );
+                                            return
+                                                ret;
+                                        }
+                                       ).ToDictionary(
+                                                      x =>
+                                                          x.Key,
+                                                      y =>
+                                                          y.Value
+                                                     )
+                    );
 
                 ProgressInfo?.SetProgress("Unpacking...", 3, 3);
                 IProgressIndicator perFileProgress = ProgressInfo?.CreateSubTask();
@@ -160,10 +160,10 @@ namespace OpenFL.ResourceManagement
                             }
 
                             perFileProgress?.SetProgress(
-                                                        "Unpacking:" + arch.Entries[i].FullName,
-                                                        fileCount,
-                                                        arch.Entries.Count - 1
-                                                       );
+                                                         "Unpacking:" + arch.Entries[i].FullName,
+                                                         fileCount,
+                                                         arch.Entries.Count - 1
+                                                        );
                             fileCount++;
                             u.Unpack(
                                      targetDir,
@@ -179,10 +179,10 @@ namespace OpenFL.ResourceManagement
                     if (!unpacked)
                     {
                         perFileProgress?.SetProgress(
-                                                    "Unpacking:" + arch.Entries[i].FullName,
-                                                    fileCount,
-                                                    arch.Entries.Count - 1
-                                                   );
+                                                     "Unpacking:" + arch.Entries[i].FullName,
+                                                     fileCount,
+                                                     arch.Entries.Count - 1
+                                                    );
                         fileCount++;
                         string key = unpackers.Where(x => x.Value.Length == 0).Select(x => x.Key).FirstOrDefault();
                         if (key == null)
@@ -215,10 +215,10 @@ namespace OpenFL.ResourceManagement
             string folder, string targetFile, string name, string unpackerConfig, IProgressIndicator ProgressInfo)
         {
             ResourcePackInfo info = new ResourcePackInfo
-            {
-                Name = name,
-                UnpackerConfig = unpackerConfig
-            };
+                                    {
+                                        Name = name,
+                                        UnpackerConfig = unpackerConfig
+                                    };
             ProgressInfo?.SetProgress("Writing Package Info: " + info, 1, 2);
             XmlSerializer xs = new XmlSerializer(typeof(ResourcePackInfo));
             Stream s = File.OpenWrite(Path.Combine(folder, "Info.xml"));
@@ -238,7 +238,12 @@ namespace OpenFL.ResourceManagement
                 perFileProgressIndicator?.SetProgress("Packing File: " + files[i], i, files.Length - 1);
                 try
                 {
-                    string zipLocation = files[i].Replace(folder.EndsWith("\\") || folder.EndsWith("/") ? folder : folder + "\\", "");
+                    string zipLocation = files[i].Replace(
+                                                          folder.EndsWith("\\") || folder.EndsWith("/")
+                                                              ? folder
+                                                              : folder + "\\",
+                                                          ""
+                                                         );
                     ZipArchiveEntry entry = arch.CreateEntry(zipLocation);
                     Stream filestr = File.OpenRead(files[i]);
                     Stream zipstr = entry.Open();

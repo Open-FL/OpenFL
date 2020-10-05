@@ -36,11 +36,11 @@ namespace OpenFL.ResourceManagement
                                   iset,
                                   bc,
                                   FLProgramCheckBuilder.CreateDefaultCheckBuilder(
-                                                                                  iset,
-                                                                                  bc,
-                                                                                  FLProgramCheckType
-                                                                                      .InputValidationOptimized
-                                                                                 )
+                                       iset,
+                                       bc,
+                                       FLProgramCheckType
+                                           .InputValidationOptimized
+                                      )
                                  );
         }
 
@@ -49,18 +49,18 @@ namespace OpenFL.ResourceManagement
         public override void Unpack(string targetDir, string name, Stream stream, IProgressIndicator progressIndicator)
         {
             progressIndicator?.SetProgress($"[{UnpackerName}]Loading FL Program: {name}", 1, 3);
-            FLProgram p=null;
+            FLProgram p = null;
             try
             {
                 SerializableFLProgram prog = runner.Parser.Process(
-                                                               new FLParserInput(
-                                                                                 name,
-                                                                                 new StreamReader(stream)
-                                                                                 .ReadToEnd().Split('\n')
-                                                                                 .Select(x => x.Trim()).ToArray(),
-                                                                                 true
-                                                                                )
-                                                              );
+                                                                   new FLParserInput(
+                                                                        name,
+                                                                        new StreamReader(stream)
+                                                                            .ReadToEnd().Split('\n')
+                                                                            .Select(x => x.Trim()).ToArray(),
+                                                                        true
+                                                                       )
+                                                                  );
 
                 progressIndicator?.SetProgress($"[{UnpackerName}]Running FL Program: {name}", 2, 3);
 
@@ -77,7 +77,7 @@ namespace OpenFL.ResourceManagement
                                                        : name.Replace("/", "\\")
                                                   );
                     Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-                    filePath = filePath.Remove(filePath.Length-2, 2)+"png";
+                    filePath = filePath.Remove(filePath.Length - 2, 2) + "png";
 
                     progressIndicator?.SetProgress(
                                                    $"[{UnpackerName}]Writing FL Program Output: {Path.GetFileNameWithoutExtension(name)}",
@@ -91,8 +91,8 @@ namespace OpenFL.ResourceManagement
             }
             catch (Exception)
             {
-
             }
+
             stream.Close();
             p?.FreeResources();
             progressIndicator?.Dispose();
