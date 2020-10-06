@@ -22,6 +22,25 @@ namespace OpenFL.Core
             this SerializableFLProgram program, CLAPI instance,
             FLInstructionSet instructionSet)
         {
+
+            foreach (EmbeddedKernelData embeddedKernelData in program.KernelData)
+            {
+                if (instructionSet.Database.KernelNames.Contains(embeddedKernelData.Kernel)) continue;
+
+                instructionSet.Database.AddProgram(
+                                                   instance,
+                                                   embeddedKernelData.Source,
+                                                   "./",
+                                                   false,
+                                                   out CLProgramBuildResult res
+                                                  );
+                if (!res)
+                {
+                    throw res.GetAggregateException();
+                }
+
+            }
+
             Dictionary<string, FLBuffer> buffers = new Dictionary<string, FLBuffer>();
             Dictionary<string, IFunction> functions = new Dictionary<string, IFunction>();
             Dictionary<string, IFunction> externalFunctions = new Dictionary<string, IFunction>();
@@ -73,23 +92,7 @@ namespace OpenFL.Core
             //initialize function
             p.SetRoot();
             
-			foreach (EmbeddedKernelData embeddedKernelData in program.KernelData)
-            {
-                if (instructionSet.Database.KernelNames.Contains(embeddedKernelData.Kernel)) continue;
 
-                instructionSet.Database.AddProgram(
-                                                   instance,
-                                                   embeddedKernelData.Source,
-                                                   "./",
-                                                   false,
-                                                   out CLProgramBuildResult res
-                                                  );
-                if (!res)
-                {
-                    throw res.GetAggregateException();
-                }
-
-            }
 
             return p;
         }
