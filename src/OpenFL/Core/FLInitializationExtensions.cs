@@ -72,7 +72,24 @@ namespace OpenFL.Core
             //for functions
             //initialize function
             p.SetRoot();
+            
+			foreach (EmbeddedKernelData embeddedKernelData in program.KernelData)
+            {
+                if (instructionSet.Database.KernelNames.Contains(embeddedKernelData.Kernel)) continue;
 
+                instructionSet.Database.AddProgram(
+                                                   instance,
+                                                   embeddedKernelData.Source,
+                                                   "./",
+                                                   false,
+                                                   out CLProgramBuildResult res
+                                                  );
+                if (!res)
+                {
+                    throw res.GetAggregateException();
+                }
+
+            }
 
             return p;
         }
