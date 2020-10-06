@@ -6,6 +6,20 @@ using OpenFL.Core.ProgramChecks;
 
 namespace OpenFL.Core.DataObjects.SerializableDataObjects
 {
+    public class EmbeddedKernelData
+    {
+
+        public readonly string Kernel;
+        public readonly string Source;
+
+        public EmbeddedKernelData(string kernelName, string source)
+        {
+            Kernel = kernelName;
+            Source = source;
+        }
+
+    }
+    
     public class SerializableFLProgram : FLPipelineResult
     {
 
@@ -17,6 +31,7 @@ namespace OpenFL.Core.DataObjects.SerializableDataObjects
             ExternalFunctions = externalFunctions;
             Functions = functions;
             DefinedBuffers = definedBuffers;
+            KernelData = new List<EmbeddedKernelData>();
         }
 
         public string FileName { get; }
@@ -26,6 +41,8 @@ namespace OpenFL.Core.DataObjects.SerializableDataObjects
         public List<SerializableFLFunction> Functions { get; }
 
         public List<SerializableFLBuffer> DefinedBuffers { get; }
+
+        public List<EmbeddedKernelData> KernelData { get; }
 
 
         public Dictionary<SerializableNamedObject, Tuple<int, int>> ToString(out string s)
