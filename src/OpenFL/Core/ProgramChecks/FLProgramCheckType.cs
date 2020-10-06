@@ -10,6 +10,7 @@ namespace OpenFL.Core.ProgramChecks
         InputValidation = 1,
         Optimization = 2,
         AggressiveOptimization = 4,
+        Disabled = 8,
 
 
         InputValidationOptimized = InputValidation | Optimization,
