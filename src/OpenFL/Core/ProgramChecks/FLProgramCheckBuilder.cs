@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 using OpenFL.Core.Buffers.BufferCreators;
 using OpenFL.Core.Instructions.InstructionCreators;
@@ -51,7 +52,7 @@ namespace OpenFL.Core.ProgramChecks
 
         public bool IsAllowedPlugin(IPlugin plugin)
         {
-            return true;
+            return plugin is FLProgramCheck && ProgramChecks.All( x=> x.GetType() != plugin.GetType());
         }
 
         public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
