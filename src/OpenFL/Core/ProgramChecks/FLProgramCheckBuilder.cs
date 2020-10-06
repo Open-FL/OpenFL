@@ -52,7 +52,7 @@ namespace OpenFL.Core.ProgramChecks
 
         public bool IsAllowedPlugin(IPlugin plugin)
         {
-            return plugin is FLProgramCheck && ProgramChecks.All( x=> x.GetType() != plugin.GetType());
+            return true;
         }
 
         public void OnPluginLoad(IPlugin plugin, BasePluginPointer ptr)
@@ -72,7 +72,7 @@ namespace OpenFL.Core.ProgramChecks
 
         public void AddProgramCheck(FLProgramCheck check)
         {
-            if (IsAttached)
+            if (IsAttached|| ProgramChecks.Any(x => x.GetType() == check.GetType()))
             {
                 return;
             }
