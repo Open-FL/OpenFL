@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
 
+using OpenFL.Core.DataObjects.SerializableDataObjects;
+
 namespace OpenFL.Core.Parsing.StageResults
 {
     public class FLParserInput
     {
+        public List<EmbeddedKernelData> KernelData { get; set; } = new List<EmbeddedKernelData>();
 
         public Dictionary<string, bool> Defines;
 

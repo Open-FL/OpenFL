@@ -109,7 +109,8 @@ namespace OpenFL.Parsing.Stages
                                               functions,
                                               definedBuffers,
                                               definedScripts,
-                                              options
+                                              options,
+                                              input.AdditionalKernels
                                              );
         }
 
