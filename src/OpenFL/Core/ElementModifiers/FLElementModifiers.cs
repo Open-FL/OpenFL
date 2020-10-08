@@ -46,7 +46,7 @@ namespace OpenFL.Core.ElementModifiers
                 InternalValidate();
             }
         }
-        
+
         private void InternalValidate()
         {
             for (int i = 0; i < Modifiers.Count; i++)

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 using OpenFL.Core;
@@ -21,7 +20,12 @@ namespace OpenFL.Parsing.Stages
         {
             if (input.Source != null)
             {
-                return new LoadSourceStageResult(input.Filename, input.Source.ToList(), input.MainFile, input.KernelData);
+                return new LoadSourceStageResult(
+                                                 input.Filename,
+                                                 input.Source.ToList(),
+                                                 input.MainFile,
+                                                 input.KernelData
+                                                );
             }
 
             Logger.Log(LogType.Log, "Loading Source: " + input.Filename, 1);
@@ -32,7 +36,8 @@ namespace OpenFL.Parsing.Stages
             return new LoadSourceStageResult(
                                              input.Filename,
                                              TextProcessorAPI.PreprocessLines(input.Filename, defines).ToList(),
-                                             input.MainFile, input.KernelData
+                                             input.MainFile,
+                                             input.KernelData
                                             );
         }
 

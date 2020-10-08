@@ -14,7 +14,7 @@ namespace OpenFL.Core
         public delegate List<Out> RunWorkItemDel<In, Out>(List<In> input, int start, int count);
 
         private static readonly ADLLogger<LogType> Logger =
-            new ADLLogger<LogType>(OpenFLDebugConfig.Settings, "");
+            new ADLLogger<LogType>(OpenFLDebugConfig.Settings);
 
         public static List<Out> RunInWorkItems<In, Out>(
             List<In> input, RunWorkItemDel<In, Out> action,

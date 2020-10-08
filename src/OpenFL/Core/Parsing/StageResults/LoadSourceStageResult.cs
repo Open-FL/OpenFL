@@ -7,7 +7,8 @@ namespace OpenFL.Core.Parsing.StageResults
     public class LoadSourceStageResult
     {
 
-        public LoadSourceStageResult(string filename, List<string> source, bool mainFile, List<EmbeddedKernelData> embedded)
+        public LoadSourceStageResult(
+            string filename, List<string> source, bool mainFile, List<EmbeddedKernelData> embedded)
         {
             MainFile = mainFile;
             Filename = filename;

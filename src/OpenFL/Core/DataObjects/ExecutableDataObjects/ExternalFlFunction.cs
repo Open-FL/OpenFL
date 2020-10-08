@@ -10,17 +10,18 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
 
         private readonly SerializableFLProgram ExternalFunctionBlueprint;
         private readonly FLInstructionSet InstructionSet;
-        public FLExecutableElementModifiers Modifiers { get; }
 
         public ExternalFlFunction(
             string name, SerializableFLProgram external, FLInstructionSet iset,
-            FLExecutableElementModifiers modifiers):base("ext-func")
+            FLExecutableElementModifiers modifiers) : base("ext-func")
         {
             Name = name;
             Modifiers = modifiers;
             ExternalFunctionBlueprint = external;
             InstructionSet = iset;
         }
+
+        public FLExecutableElementModifiers Modifiers { get; }
 
         public string Name { get; }
 

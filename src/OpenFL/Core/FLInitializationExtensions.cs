@@ -22,10 +22,12 @@ namespace OpenFL.Core
             this SerializableFLProgram program, CLAPI instance,
             FLInstructionSet instructionSet)
         {
-
             foreach (EmbeddedKernelData embeddedKernelData in program.KernelData)
             {
-                if (instructionSet.Database.KernelNames.Contains(embeddedKernelData.Kernel)) continue;
+                if (instructionSet.Database.KernelNames.Contains(embeddedKernelData.Kernel))
+                {
+                    continue;
+                }
 
                 instructionSet.Database.AddProgram(
                                                    instance,
@@ -38,7 +40,6 @@ namespace OpenFL.Core
                 {
                     throw res.GetAggregateException();
                 }
-
             }
 
             Dictionary<string, FLBuffer> buffers = new Dictionary<string, FLBuffer>();
@@ -68,7 +69,10 @@ namespace OpenFL.Core
 
             for (int i = 0; i < program.Functions.Count; i++)
             {
-                functions.Add(program.Functions[i].Name, new FLFunction(program.Functions[i].Name, program.Functions[i].Modifiers));
+                functions.Add(
+                              program.Functions[i].Name,
+                              new FLFunction(program.Functions[i].Name, program.Functions[i].Modifiers)
+                             );
             }
 
             FLProgram p = new FLProgram(instance, externalFunctions, buffers, functions);
@@ -91,7 +95,6 @@ namespace OpenFL.Core
             //for functions
             //initialize function
             p.SetRoot();
-            
 
 
             return p;

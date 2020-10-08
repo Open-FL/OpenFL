@@ -6,6 +6,7 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
     {
 
         string Name { get; }
+
         FLExecutableElementModifiers Modifiers { get; }
 
         void Process();

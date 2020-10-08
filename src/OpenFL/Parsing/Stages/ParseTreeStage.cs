@@ -49,7 +49,8 @@ namespace OpenFL.Parsing.Stages
             List<SerializableFLFunction> flFunctions =
                 ParseFunctions(input.Functions, input.DefinedBuffers, input.DefinedScripts);
             Logger.Log(LogType.Log, "Buffer Nodes: " + flFunctions.Select(x => x.Name).Unpack(", "), 4);
-            SerializableFLProgram prog = new SerializableFLProgram(input.Filename, scripts, flFunctions, definedBuffers);
+            SerializableFLProgram prog =
+                new SerializableFLProgram(input.Filename, scripts, flFunctions, definedBuffers);
             prog.KernelData.AddRange(input.KernelData);
             return prog;
         }

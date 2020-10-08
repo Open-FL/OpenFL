@@ -19,7 +19,7 @@ namespace OpenFL.Core.DataObjects.SerializableDataObjects
         }
 
     }
-    
+
     public class SerializableFLProgram : FLPipelineResult
     {
 

@@ -12,7 +12,8 @@ namespace OpenFL.Core.Parsing.StageResults
 
         public StaticInspectionResult(
             string filename, List<string> source, List<StaticFunction> functions,
-            DefineStatement[] definedBuffers, DefineStatement[] definedScripts, ImportOptions options, List<EmbeddedKernelData> embedded)
+            DefineStatement[] definedBuffers, DefineStatement[] definedScripts, ImportOptions options,
+            List<EmbeddedKernelData> embedded)
         {
             Options = options;
             Filename = filename;

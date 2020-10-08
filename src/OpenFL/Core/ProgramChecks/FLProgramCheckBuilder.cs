@@ -72,7 +72,7 @@ namespace OpenFL.Core.ProgramChecks
 
         public void AddProgramCheck(FLProgramCheck check)
         {
-            if (IsAttached|| ProgramChecks.Any(x => x.GetType() == check.GetType()))
+            if (IsAttached || ProgramChecks.Any(x => x.GetType() == check.GetType()))
             {
                 return;
             }

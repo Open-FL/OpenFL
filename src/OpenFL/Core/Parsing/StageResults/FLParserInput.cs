@@ -6,7 +6,6 @@ namespace OpenFL.Core.Parsing.StageResults
 {
     public class FLParserInput
     {
-        public List<EmbeddedKernelData> KernelData { get; set; } = new List<EmbeddedKernelData>();
 
         public Dictionary<string, bool> Defines;
 
@@ -36,6 +35,8 @@ namespace OpenFL.Core.Parsing.StageResults
         {
             Source = source;
         }
+
+        public List<EmbeddedKernelData> KernelData { get; set; } = new List<EmbeddedKernelData>();
 
         public string Filename { get; }
 

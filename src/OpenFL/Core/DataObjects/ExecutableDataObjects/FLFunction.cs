@@ -15,17 +15,17 @@ namespace OpenFL.Core.DataObjects.ExecutableDataObjects
             Modifiers = mods;
         }
 
-        internal FLFunction(string name, FLFunctionElementModifiers mods):base("func")
+        internal FLFunction(string name, FLFunctionElementModifiers mods) : base("func")
         {
             Name = name;
             Modifiers = mods;
         }
 
-        public FLExecutableElementModifiers Modifiers { get; }
-
         public List<FLInstruction> Instructions { get; private set; }
 
         public VariableManager<decimal> Variables { get; private set; }
+
+        public FLExecutableElementModifiers Modifiers { get; }
 
         public string Name { get; }
 
