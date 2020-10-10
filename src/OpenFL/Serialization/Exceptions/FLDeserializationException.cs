@@ -1,4 +1,6 @@
-﻿namespace OpenFL.Serialization.Exceptions
+﻿using Utility.Exceptions;
+
+namespace OpenFL.Serialization.Exceptions
 {
     public class FLDeserializationException : Byt3Exception
     {

@@ -5,6 +5,8 @@ using System.IO;
 using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Serialization.Exceptions;
 
+using Utility.Serialization;
+
 namespace OpenFL.Serialization.Serializers.Internal
 {
     public class SerializableInstructionSerializer : FLBaseSerializer

@@ -3,6 +3,9 @@
 using OpenFL.Serialization.Exceptions;
 using OpenFL.Serialization.FileFormat;
 
+using Utility.Serialization;
+using Utility.Serialization.Serializers;
+
 namespace OpenFL.Serialization.Serializers.Internal.FileFormatSerializer
 {
     public class FLHeaderSerializer : ASerializer<FLHeader>

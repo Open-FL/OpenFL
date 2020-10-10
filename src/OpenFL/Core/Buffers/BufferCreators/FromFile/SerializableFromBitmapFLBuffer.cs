@@ -1,5 +1,7 @@
 ﻿using System.Drawing;
 
+using OpenCL.NET.Memory;
+
 using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.ElementModifiers;
 

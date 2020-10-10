@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Utility.FastString;
+
 namespace OpenFL.Core.Parsing.StageResults
 {
     public class StaticInstruction

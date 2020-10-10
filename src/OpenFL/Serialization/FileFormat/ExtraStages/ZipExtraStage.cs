@@ -1,6 +1,8 @@
 ﻿using System.IO;
 using System.IO.Compression;
 
+using Utility.ObjectPipeline;
+
 namespace OpenFL.Serialization.FileFormat.ExtraStages
 {
     internal class ZipExtraStage : PipelineStage<byte[], byte[]>

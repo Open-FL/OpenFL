@@ -3,6 +3,8 @@ using System.IO;
 
 using OpenFL.Core.ElementModifiers;
 
+using Utility.IO.Callbacks;
+
 namespace OpenFL.Core.Buffers.BufferCreators.BuiltIn.FromFile
 {
     public class SerializableFromFileFLBuffer : SerializableFromBitmapFLBuffer

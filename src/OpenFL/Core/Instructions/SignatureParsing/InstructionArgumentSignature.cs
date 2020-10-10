@@ -3,6 +3,8 @@ using System.Linq;
 
 using OpenFL.Core.DataObjects.SerializableDataObjects;
 
+using Utility.FastString;
+
 namespace OpenFL.Core.ProgramChecks.Checking.Signatures
 {
     public class InstructionArgumentSignature

@@ -5,6 +5,9 @@ using System.IO.Compression;
 using System.Linq;
 using System.Xml.Serialization;
 
+using Utility.IO.Callbacks;
+using Utility.ProgressFeedback;
+
 namespace OpenFL.ResourceManagement
 {
     public static class ResourceManager

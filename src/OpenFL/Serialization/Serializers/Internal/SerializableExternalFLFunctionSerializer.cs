@@ -4,6 +4,8 @@ using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.ElementModifiers;
 using OpenFL.Core.Instructions.InstructionCreators;
 
+using Utility.Serialization;
+
 namespace OpenFL.Serialization.Serializers.Internal
 {
     public class SerializableExternalFLFunctionSerializer : FLBaseSerializer

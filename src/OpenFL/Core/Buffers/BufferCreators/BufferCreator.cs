@@ -6,6 +6,10 @@ using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.ElementModifiers;
 using OpenFL.Core.Exceptions;
 
+using PluginSystem.Core;
+using PluginSystem.Core.Interfaces;
+using PluginSystem.Core.Pointer;
+
 namespace OpenFL.Core.Buffers.BufferCreators
 {
     public class BufferCreator : IPluginHost

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 
+using OpenCL.Wrapper;
+using OpenCL.Wrapper.TypeEnums;
+
 using OpenFL.Core;
 using OpenFL.Core.Buffers;
 using OpenFL.Core.Buffers.BufferCreators;
@@ -11,6 +14,8 @@ using OpenFL.Core.Parsing.StageResults;
 using OpenFL.Core.ProgramChecks;
 using OpenFL.Parsing;
 using OpenFL.Serialization;
+
+using Utility.IO.Callbacks;
 
 namespace OpenFL.Threading
 {

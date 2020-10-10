@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using System.Reflection;
 
+using OpenCL.Wrapper;
+using OpenCL.Wrapper.TypeEnums;
+
 using OpenFL.Core.DataObjects.ExecutableDataObjects;
 using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.Exceptions;
+
+using PluginSystem.Core;
+using PluginSystem.Core.Interfaces;
+using PluginSystem.Core.Pointer;
 
 namespace OpenFL.Core.Instructions.InstructionCreators
 {

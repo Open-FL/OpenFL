@@ -1,4 +1,7 @@
-﻿using OpenFL.Core;
+﻿using OpenCL.NET.Memory;
+using OpenCL.Wrapper;
+
+using OpenFL.Core;
 using OpenFL.Core.Buffers;
 using OpenFL.Core.Buffers.BufferCreators;
 using OpenFL.Core.DataObjects.ExecutableDataObjects;

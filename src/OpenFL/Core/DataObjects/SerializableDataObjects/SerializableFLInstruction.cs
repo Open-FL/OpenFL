@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 
+using Utility.FastString;
+
 namespace OpenFL.Core.DataObjects.SerializableDataObjects
 {
     public class SerializableFLInstruction

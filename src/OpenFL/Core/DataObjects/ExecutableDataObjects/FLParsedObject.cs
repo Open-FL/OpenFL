@@ -1,4 +1,6 @@
-﻿namespace OpenFL.Core.DataObjects.ExecutableDataObjects
+﻿using Utility.ADL;
+
+namespace OpenFL.Core.DataObjects.ExecutableDataObjects
 {
     public abstract class FLParsedObject : ALoggable<LogType>, IParsedObject
     {

@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using OpenFL.Core.Buffers.BufferCreators;
 using OpenFL.Core.Instructions.InstructionCreators;
 
+using Utility.ADL;
+using Utility.ADL.Configs;
+using Utility.ObjectPipeline;
+
 namespace OpenFL.Core.ProgramChecks
 {
     public abstract class FLProgramCheck : PipelineStage

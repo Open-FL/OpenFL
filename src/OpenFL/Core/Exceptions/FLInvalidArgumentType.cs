@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Utility.Exceptions;
+
 namespace OpenFL.Core.Exceptions
 {
     /// <summary>

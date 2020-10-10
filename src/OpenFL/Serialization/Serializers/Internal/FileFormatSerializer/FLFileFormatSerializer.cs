@@ -4,6 +4,9 @@ using OpenFL.Serialization.Exceptions;
 using OpenFL.Serialization.FileFormat;
 using OpenFL.Serialization.FileFormat.ExtraStages;
 
+using Utility.Serialization;
+using Utility.Serialization.Serializers;
+
 namespace OpenFL.Serialization.Serializers.Internal.FileFormatSerializer
 {
     public class FLFileFormatSerializer : ASerializer<FLFileFormat>

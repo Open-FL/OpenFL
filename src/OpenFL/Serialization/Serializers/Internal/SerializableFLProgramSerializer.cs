@@ -7,6 +7,12 @@ using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.Instructions.InstructionCreators;
 using OpenFL.Serialization.Exceptions;
 
+using PluginSystem.Core.Interfaces;
+using PluginSystem.Core.Pointer;
+
+using Utility.Serialization;
+using Utility.Serialization.Serializers;
+
 namespace OpenFL.Serialization.Serializers.Internal
 {
     public class SerializableFLProgramSerializer : ASerializer<SerializableFLProgram>, IPluginHost

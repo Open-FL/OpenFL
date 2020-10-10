@@ -1,4 +1,6 @@
-﻿namespace OpenFL.Serialization.FileFormat.ExtraStages
+﻿using Utility.ObjectPipeline;
+
+namespace OpenFL.Serialization.FileFormat.ExtraStages
 {
     internal class ExtraStage
     {
