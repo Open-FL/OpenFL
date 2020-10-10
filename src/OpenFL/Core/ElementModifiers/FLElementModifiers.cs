@@ -3,8 +3,6 @@ using System.Linq;
 
 using OpenFL.Core.Exceptions;
 
-using Utility.FastString;
-
 namespace OpenFL.Core.ElementModifiers
 {
     public abstract class FLElementModifiers

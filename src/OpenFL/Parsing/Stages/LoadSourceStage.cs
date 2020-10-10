@@ -4,10 +4,6 @@ using System.Linq;
 using OpenFL.Core;
 using OpenFL.Core.Parsing.StageResults;
 
-using Utility.ADL;
-using Utility.ExtPP.API;
-using Utility.ObjectPipeline;
-
 namespace OpenFL.Parsing.Stages
 {
     public class LoadSourceStage : PipelineStage<FLParserInput, LoadSourceStageResult>

@@ -1,7 +1,5 @@
 ﻿using System.IO;
 
-using Utility.ProgressFeedback;
-
 namespace OpenFL.ResourceManagement
 {
     public class DefaultUnpacker : ResourceTypeUnpacker

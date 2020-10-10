@@ -4,12 +4,6 @@ using System.Linq;
 using OpenFL.Core.Buffers.BufferCreators;
 using OpenFL.Core.Instructions.InstructionCreators;
 
-using PluginSystem.Core;
-using PluginSystem.Core.Interfaces;
-using PluginSystem.Core.Pointer;
-
-using Utility.ObjectPipeline;
-
 namespace OpenFL.Core.ProgramChecks
 {
     public class FLProgramCheckBuilder : IPluginHost

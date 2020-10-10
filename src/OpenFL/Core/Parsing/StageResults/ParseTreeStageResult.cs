@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 
-using OpenCL.Wrapper;
-
 using OpenFL.Core.Buffers;
 using OpenFL.Core.DataObjects.ExecutableDataObjects;
 

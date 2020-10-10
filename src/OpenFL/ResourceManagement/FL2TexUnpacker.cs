@@ -3,16 +3,12 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 
-using OpenCL.Wrapper;
-
 using OpenFL.Core.Buffers.BufferCreators;
 using OpenFL.Core.DataObjects.ExecutableDataObjects;
 using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.Instructions.InstructionCreators;
 using OpenFL.Core.Parsing.StageResults;
 using OpenFL.Core.ProgramChecks;
-
-using Utility.ProgressFeedback;
 
 namespace OpenFL.ResourceManagement
 {

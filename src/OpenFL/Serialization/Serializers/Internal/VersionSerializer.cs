@@ -1,8 +1,5 @@
 ﻿using System;
 
-using Utility.Serialization;
-using Utility.Serialization.Serializers;
-
 namespace OpenFL.Serialization.Serializers.Internal
 {
     public class VersionSerializer : ASerializer<Version>

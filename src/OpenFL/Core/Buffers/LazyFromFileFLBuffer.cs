@@ -1,12 +1,6 @@
 ﻿using System.Drawing;
 
-using OpenCL.NET.Memory;
-
 using OpenFL.Core.ElementModifiers;
-
-using Utility.IO.Callbacks;
-
-using Image = System.Drawing.Image;
 
 namespace OpenFL.Core.Buffers
 {

@@ -5,8 +5,6 @@ using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.ElementModifiers;
 using OpenFL.Core.Parsing.StageResults;
 
-using Utility.Serialization;
-
 namespace OpenFL.Serialization.Serializers.Internal
 {
     public class SerializableFLFunctionSerializer : FLBaseSerializer

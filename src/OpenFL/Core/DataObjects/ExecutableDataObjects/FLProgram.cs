@@ -2,15 +2,9 @@
 using System.Drawing;
 using System.Linq;
 
-using OpenCL.NET.DataTypes;
-using OpenCL.NET.Memory;
-using OpenCL.Wrapper;
-
 using OpenFL.Core.Buffers;
 using OpenFL.Core.Exceptions;
 using OpenFL.Core.Instructions.Variables;
-
-using Utility.ADL;
 
 namespace OpenFL.Core.DataObjects.ExecutableDataObjects
 {

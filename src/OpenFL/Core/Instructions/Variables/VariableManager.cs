@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 
-using Utility.Exceptions;
-
 namespace OpenFL.Core.Instructions.Variables
 {
     public class VariableManager<T>

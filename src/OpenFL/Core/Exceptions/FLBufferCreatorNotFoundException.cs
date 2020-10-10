@@ -1,6 +1,4 @@
-﻿using Utility.Exceptions;
-
-namespace OpenFL.Core.Exceptions
+﻿namespace OpenFL.Core.Exceptions
 {
     public class FLBufferCreatorNotFoundException : Byt3Exception
     {

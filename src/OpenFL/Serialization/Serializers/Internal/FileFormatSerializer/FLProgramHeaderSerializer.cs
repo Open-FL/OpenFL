@@ -1,7 +1,4 @@
-﻿using Utility.Serialization;
-using Utility.Serialization.Serializers;
-
-namespace OpenFL.Serialization.Serializers.Internal.FileFormatSerializer
+﻿namespace OpenFL.Serialization.Serializers.Internal.FileFormatSerializer
 {
     public class FLProgramHeaderSerializer : ASerializer<FLProgramHeader>
     {

@@ -1,12 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 
 using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.ElementModifiers;
-
-using Utility.FastString;
-using Utility.IO.Callbacks;
 
 namespace OpenFL.Core.Buffers.BufferCreators.BuiltIn.FromFile
 {

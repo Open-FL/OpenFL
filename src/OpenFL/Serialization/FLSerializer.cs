@@ -14,10 +14,6 @@ using OpenFL.Serialization.Serializers.Internal.ArgumentSerializer;
 using OpenFL.Serialization.Serializers.Internal.BufferSerializer;
 using OpenFL.Serialization.Serializers.Internal.FileFormatSerializer;
 
-using PluginSystem.Core;
-
-using Utility.Serialization;
-
 namespace OpenFL.Serialization
 {
     public static class FLSerializer

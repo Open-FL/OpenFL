@@ -3,10 +3,6 @@
 using OpenFL.Core;
 using OpenFL.Core.Parsing.StageResults;
 
-using Utility.ADL;
-using Utility.FastString;
-using Utility.ObjectPipeline;
-
 namespace OpenFL.Parsing.Stages
 {
     public class RemoveCommentStage : PipelineStage<LoadSourceStageResult, LoadSourceStageResult>

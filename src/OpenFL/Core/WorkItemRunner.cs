@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using Utility.ADL;
-
 namespace OpenFL.Core
 {
     public static class WorkItemRunner

@@ -6,8 +6,6 @@ using System.IO;
 using OpenFL.Core.Buffers.BufferCreators.BuiltIn.FromFile;
 using OpenFL.Core.ElementModifiers;
 
-using Utility.Serialization;
-
 namespace OpenFL.Serialization.Serializers.Internal.BufferSerializer
 {
     public class FromImageFLBufferSerializer : FLBaseSerializer

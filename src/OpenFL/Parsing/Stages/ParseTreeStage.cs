@@ -12,12 +12,6 @@ using OpenFL.Core.ElementModifiers;
 using OpenFL.Core.Exceptions;
 using OpenFL.Core.Parsing.StageResults;
 
-using Utility.ADL;
-using Utility.Exceptions;
-using Utility.FastString;
-using Utility.IO.Callbacks;
-using Utility.ObjectPipeline;
-
 namespace OpenFL.Parsing.Stages
 {
     public class ParseTreeStage : PipelineStage<StaticInspectionResult, SerializableFLProgram>

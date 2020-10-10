@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Reflection;
 
-using Utility.ADL;
-using Utility.ADL.Configs;
-
 namespace OpenFL.Core
 {
     public static class OpenFLDebugConfig

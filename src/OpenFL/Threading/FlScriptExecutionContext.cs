@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Drawing;
 
-using OpenCL.NET.Memory;
-using OpenCL.Wrapper;
-
 using OpenFL.Core.DataObjects.ExecutableDataObjects;
 
 namespace OpenFL.Threading

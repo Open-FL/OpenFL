@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-using OpenCL.Wrapper;
-
 using OpenFL.Core;
 using OpenFL.Core.Buffers.BufferCreators;
 using OpenFL.Core.DataObjects.SerializableDataObjects;
@@ -12,11 +10,6 @@ using OpenFL.Core.Instructions.InstructionCreators;
 using OpenFL.Core.Parsing.StageResults;
 using OpenFL.Parsing.ExtPP.API.Configurations;
 using OpenFL.Parsing.Stages;
-
-using Utility.ADL;
-using Utility.ExtPP.API;
-using Utility.FastString;
-using Utility.ObjectPipeline;
 
 namespace OpenFL.Parsing
 {

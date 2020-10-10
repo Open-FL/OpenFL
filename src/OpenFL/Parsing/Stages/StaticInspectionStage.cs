@@ -7,12 +7,6 @@ using OpenFL.Core;
 using OpenFL.Core.Parsing;
 using OpenFL.Core.Parsing.StageResults;
 
-using Utility.ADL;
-using Utility.CommandRunner;
-using Utility.CommandRunner.BuiltInCommands.SetSettings;
-using Utility.FastString;
-using Utility.ObjectPipeline;
-
 namespace OpenFL.Parsing.Stages
 {
     public class StaticInspectionStage : PipelineStage<LoadSourceStageResult, StaticInspectionResult>

@@ -1,7 +1,4 @@
-﻿using OpenCL.NET.Memory;
-using OpenCL.Wrapper;
-
-using OpenFL.Core.DataObjects.SerializableDataObjects;
+﻿using OpenFL.Core.DataObjects.SerializableDataObjects;
 using OpenFL.Core.ElementModifiers;
 
 namespace OpenFL.Core.Buffers.BufferCreators.BuiltIn.FromFile

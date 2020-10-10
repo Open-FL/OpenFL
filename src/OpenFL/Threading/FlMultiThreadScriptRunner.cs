@@ -1,8 +1,5 @@
 ﻿using System;
 
-using OpenCL.Wrapper;
-using OpenCL.Wrapper.TypeEnums;
-
 using OpenFL.Core.DataObjects.ExecutableDataObjects;
 
 namespace OpenFL.Threading

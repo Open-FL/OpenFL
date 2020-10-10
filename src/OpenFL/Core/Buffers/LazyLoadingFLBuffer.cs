@@ -1,8 +1,5 @@
 ﻿using System;
 
-using OpenCL.NET.Memory;
-using OpenCL.Wrapper;
-
 using OpenFL.Core.DataObjects.ExecutableDataObjects;
 
 namespace OpenFL.Core.Buffers

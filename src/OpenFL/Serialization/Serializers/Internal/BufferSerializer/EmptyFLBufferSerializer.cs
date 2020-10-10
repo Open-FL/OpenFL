@@ -1,8 +1,6 @@
 ﻿using OpenFL.Core.Buffers.BufferCreators.BuiltIn.Empty;
 using OpenFL.Core.ElementModifiers;
 
-using Utility.Serialization;
-
 namespace OpenFL.Serialization.Serializers.Internal.BufferSerializer
 {
     public class EmptyFLBufferSerializer : FLBaseSerializer
